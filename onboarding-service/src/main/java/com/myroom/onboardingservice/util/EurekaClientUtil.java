@@ -1,5 +1,6 @@
 package com.myroom.onboardingservice.util;
 
+import com.myroom.onboardingservice.exception.OnboardingServiceRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -20,6 +21,11 @@ public class EurekaClientUtil {
 
     public ServiceInstance getServiceInstance(String serviceName) {
         List<ServiceInstance> instances = getServiceInstances(serviceName);
+        if (instances == null || instances.isEmpty()) {
+            log.error("Service {} is not available in discovery server", serviceName);
+            throw new OnboardingServiceRuntimeException("Service " + serviceName
+                    + " is not available. Please ensure the service is running and registered with Eureka.");
+        }
         return instances.get(0);
     }
 
@@ -29,9 +35,14 @@ public class EurekaClientUtil {
 
     public String getServiceUri(String serviceName) {
         log.info("fetching {} URI from discovery server", serviceName);
-        ServiceInstance serviceInstance = getServiceInstance(serviceName);
-        String URI = getServiceInstanceUri(serviceInstance);
-        log.info("fetched {} URI: {}", serviceName, URI);
-        return URI;
+        try {
+            ServiceInstance serviceInstance = getServiceInstance(serviceName);
+            String URI = getServiceInstanceUri(serviceInstance);
+            log.info("fetched {} URI: {}", serviceName, URI);
+            return URI;
+        } catch (OnboardingServiceRuntimeException ex) {
+            log.error("Failed to get service URI for {}: {}", serviceName, ex.getMessage());
+            throw ex;
+        }
     }
 }

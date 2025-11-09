@@ -1,0 +1,141 @@
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-11-09T05:05:08.880Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-11-10T05:05:08.880Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"organization-service"}
+{"availableDates.endDate":{"$lte":"2025-11-10T05:05:08.880Z"},"availableDates.startDate":{"$gte":"2025-11-09T05:05:08.880Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received room creation request","service":"organization-service"}
+{"address":"fwdfsfwewegergfsdfsfwf ","amenities":["test"],"availableDates":{"endDate":"2025-12-31T09:19:59.201Z","startDate":"2025-11-05T09:19:59.201Z"},"bookingStatus":"AVAILABLE","capacity":40,"checkInTypes":["ONLINE_PAYMENT"],"city":"Hanoi","description":"testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa","features":["test"],"level":"info","mainImage":"https://i.ibb.co/nMS6dxLg/wave1.jpg","message":"Creating room for:","note":"testfefsd fdsf wefsf fwef","organizationId":"6910586cdad16e42413597ec","prices":{"cleaningFee":10,"currency":"inr","price":10000,"roomService":100},"service":"organization-service","title":"Hotel Yatra","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"address":"fwdfsfwewegergfsdfsfwf ","amenities":["test"],"availableDates":{"endDate":"2025-12-31T09:19:59.201Z","startDate":"2025-11-05T09:19:59.201Z"},"bookingStatus":"AVAILABLE","capacity":40,"checkInTypes":["ONLINE_PAYMENT"],"city":"Hanoi","description":"testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa","features":["test"],"level":"info","mainImage":"https://i.ibb.co/nMS6dxLg/wave1.jpg","message":"Attempting room creation with input: ","note":"testfefsd fdsf wefsf fwef","organizationId":"6910586cdad16e42413597ec","prices":{"cleaningFee":10,"currency":"inr","price":10000,"roomService":100},"service":"organization-service","title":"Hotel Yatra","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Validating createRoomInput input","service":"organization-service"}
+{"level":"info","message":"Fetching organization data for organizationId: 6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"fetching ORGANIZATION-SERVICE URI from discovery server","service":"organization-service"}
+{"level":"info","message":"fetched ORGANIZATION-SERVICE URI: http://127.0.0.1:8085","service":"organization-service"}
+{"businessProfile":{"addresses":{"city":"Thanh Hóa","country":"VN","postalCode":"34234","state":"Thanh Hoa province","street1":"13b/10","street2":"13a/10"},"businessType":"individual","category":"housing","subcategory":"space_rental"},"description":"tesstfdsgegwhiu h rpijf wrpfoewifjwepofjdsf jrfksdjg iwj  fijwefjwefoi jwfdiosfj oifjwsaoeifjw ifoiwj ","email":"fmgduc47@gmail.com","id":"6910586cdad16e42413597ec","level":"info","message":"Organization data Fetched successfully: ","name":"AST","phone":"+840849404705","service":"organization-service","superAdmin":{"adminType":"SUPER_ADMIN","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}}
+{"level":"info","message":"Checking if the current user has the permissions.","service":"organization-service"}
+{"level":"info","message":"Getting all organization admins","service":"organization-service"}
+{"level":"info","message":"All organization admins: 3edcBmQfHXg8WUGXCKdUizicAe43","service":"organization-service"}
+{"level":"info","message":"The current user have permission.","service":"organization-service"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{"address":"require","availableDates":"require","capacity":"require","checkInTypes":"require","city":"require","createdBy":"require","mainImage":"require","organizationId":"require","prices":"require","title":"require","updatedBy":"require"},"states":{"default":{},"modify":{},"require":{"address":true,"availableDates":true,"capacity":true,"checkInTypes":true,"city":true,"createdBy":true,"mainImage":true,"organizationId":true,"prices":true,"title":true,"updatedBy":true}}},"backup":{"activePaths":{"default":{"_id":true,"images":true,"rating":true,"rating.rating":true},"modify":{"address":true,"amenities":true,"bookingStatus":true,"capacity":true,"checkInTypes":true,"city":true,"cost":true,"createdAt":true,"createdBy":true,"description":true,"features":true,"mainImage":true,"note":true,"organizationId":true,"title":true,"updatedAt":true,"updatedBy":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"pathsToScopes":{"checkInTypes":{"__v":0,"_id":"69105d217bbe68748625abe0","address":"fwdfsfwewegergfsdfsfwf ","amenities":["test"],"availableDates":{"endDate":"2025-12-31T09:19:59.201Z","startDate":"2025-11-05T09:19:59.201Z"},"bookingStatus":"AVAILABLE","capacity":40,"checkInTypes":["ONLINE_PAYMENT"],"city":"Hanoi","cost":10110,"createdAt":"2025-11-09T09:21:37.356Z","createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa","features":["test"],"images":[],"mainImage":"https://i.ibb.co/nMS6dxLg/wave1.jpg","note":"testfefsd fdsf wefsf fwef","organizationId":"6910586cdad16e42413597ec","prices":{"cleaningFee":10,"currency":"inr","price":10000,"roomService":100},"rating":{"outOf":5,"rating":null},"title":"Hotel Yatra","updatedAt":"2025-11-09T09:21:37.356Z","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"}},"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"69105d217bbe68748625abe0","address":"fwdfsfwewegergfsdfsfwf ","amenities":["test"],"availableDates":{"endDate":"2025-12-31T09:19:59.201Z","startDate":"2025-11-05T09:19:59.201Z"},"bookingStatus":"AVAILABLE","capacity":40,"checkInTypes":["ONLINE_PAYMENT"],"city":"Hanoi","cost":10110,"createdAt":"2025-11-09T09:21:37.356Z","createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa","features":["test"],"images":[],"mainImage":"https://i.ibb.co/nMS6dxLg/wave1.jpg","note":"testfefsd fdsf wefsf fwef","organizationId":"6910586cdad16e42413597ec","prices":{"cleaningFee":10,"currency":"inr","price":10000,"roomService":100},"rating":{"outOf":5,"rating":null},"title":"Hotel Yatra","updatedAt":"2025-11-09T09:21:37.356Z","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"},"level":"info","message":"Room created successfully: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6910586cdad16e42413597ec","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-11-09T09:22:15.774Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-11-10T09:22:15.774Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"organization-service"}
+{"availableDates.endDate":{"$lte":"2025-11-10T09:22:15.774Z"},"availableDates.startDate":{"$gte":"2025-11-09T09:22:15.774Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 69105d217bbe68748625abe0","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('69105d217bbe68748625abe0'),\n  organizationId: '6910586cdad16e42413597ec',\n  title: 'Hotel Yatra',\n  description: 'testf fefs  refwe fsf wef wfewefwef wefeaf ừwefsaefew rf ưa',\n  availableDates: {\n    startDate: 2025-11-05T09:19:59.201Z,\n    endDate: 2025-12-31T09:19:59.201Z\n  },\n  prices: { price: 10000, cleaningFee: 10, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'testfefsd fdsf wefsf fwef',\n  rating: { rating: null, outOf: 5 },\n  capacity: 40,\n  bookingStatus: 'AVAILABLE',\n  amenities: [ 'test' ],\n  mainImage: 'https://i.ibb.co/nMS6dxLg/wave1.jpg',\n  images: [],\n  features: [ 'test' ],\n  city: 'Hanoi',\n  address: 'fwdfsfwewegergfsdfsfwf ',\n  checkInTypes: [ 'ONLINE_PAYMENT' ],\n  createdAt: 2025-11-09T09:21:37.356Z,\n  updatedAt: 2025-11-09T09:21:37.356Z,\n  cost: 10110,\n  __v: 0\n}","service":"organization-service"}

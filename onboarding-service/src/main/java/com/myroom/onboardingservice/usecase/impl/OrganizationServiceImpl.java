@@ -1,5 +1,6 @@
 package com.myroom.onboardingservice.usecase.impl;
 
+import com.myroom.onboardingservice.api.constants.ApiConstants;
 import com.myroom.onboardingservice.data.dto.OrganizationRequestDto;
 import com.myroom.onboardingservice.data.dto.OrganizationResponseDto;
 import com.myroom.onboardingservice.exception.OnboardingServiceRuntimeException;
@@ -33,16 +34,15 @@ public class OrganizationServiceImpl implements OrganizationService {
     @Value("${services.organization-service.v1.name}")
     String organizationServiceV1Name;
 
-
     @Override
     public OrganizationResponseDto createOrganization(OrganizationRequestDto organizationRequestDto) {
         log.info("Calling {} Service for creating organization: {}", organizationServiceV1Name, organizationRequestDto);
 
-        // Construct URL
-        String organizationServiceURI = eurekaClientUtil.getServiceUri(organizationServiceID);
-        String url = organizationServiceURI + organizationServiceV1 + "/org";
+        try {
+            // Construct URL
+            String organizationServiceURI = eurekaClientUtil.getServiceUri(organizationServiceID);
+            String url = organizationServiceURI + organizationServiceV1 + "/org";
 
-        try{
             OrganizationResponseDto organizationResponseDto = webClient.post()
                     .uri(url)
                     .contentType(MediaType.APPLICATION_JSON)
@@ -55,24 +55,46 @@ public class OrganizationServiceImpl implements OrganizationService {
             return organizationResponseDto;
         } catch (WebClientResponseException webClientResponseException) {
             handleWebClientException(webClientResponseException);
+            // This will never be reached as handleWebClientException always throws an
+            // exception
             return null;
-        } catch (Exception ex){
-            throw new OnboardingServiceRuntimeException(ex.getMessage());
+        } catch (Exception ex) {
+            log.error("Error creating organization: {}", ex.getMessage(), ex);
+            throw new OnboardingServiceRuntimeException("Failed to create organization: " + ex.getMessage());
         }
     }
 
     private void handleWebClientException(WebClientResponseException webClientResponseException) {
-        log.info("Handling WebClientException");
+        log.error("WebClientException from {} Service - Status: {}, Response: {}",
+                organizationServiceV1Name,
+                webClientResponseException.getStatusCode(),
+                webClientResponseException.getResponseBodyAsString());
 
-        // Convert error response to JSONObject
-        JSONObject response = new JSONObject(webClientResponseException.getResponseBodyAsString());
+        String responseBody = webClientResponseException.getResponseBodyAsString();
 
-        log.info("Error response from {} Service is: {}", organizationServiceV1Name, response);
+        try {
+            // Try to parse error response as JSONObject
+            JSONObject response = new JSONObject(responseBody);
+            log.info("Error response from {} Service is: {}", organizationServiceV1Name, response);
 
-        String errorCode = response.getString("errorCode");
-        String message = response.getString("message");
-        String details = response.getString("details");
+            String errorCode = response.has("errorCode") ? response.getString("errorCode")
+                    : ApiConstants.INTERNAL_SERVER_ERROR;
+            String message = response.has("message") ? response.getString("message")
+                    : "Error from organization service";
+            String details = response.has("details") ? response.getString("details") : responseBody;
 
-        throw new OrganizationServiceException(errorCode, message, details);
+            throw new OrganizationServiceException(errorCode, message, details);
+        } catch (org.json.JSONException jsonException) {
+            // If response is not valid JSON, handle it as a generic error
+            log.error("Failed to parse error response as JSON: {}", responseBody);
+            String errorMessage = "Error from organization service: " + webClientResponseException.getStatusCode();
+            if (responseBody != null && !responseBody.isEmpty()) {
+                errorMessage += " - " + responseBody;
+            }
+            throw new OrganizationServiceException(
+                    ApiConstants.INTERNAL_SERVER_ERROR,
+                    errorMessage,
+                    "Unable to parse error response from organization service");
+        }
     }
 }

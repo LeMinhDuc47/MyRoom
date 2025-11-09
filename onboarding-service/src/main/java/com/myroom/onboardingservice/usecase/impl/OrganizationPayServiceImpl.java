@@ -1,5 +1,6 @@
 package com.myroom.onboardingservice.usecase.impl;
 
+import com.myroom.onboardingservice.api.constants.ApiConstants;
 import com.myroom.onboardingservice.data.dto.AccountOnboardingResponseDto;
 import com.myroom.onboardingservice.data.dto.OrganizationAccountOnboardingRequestModelDto;
 import com.myroom.onboardingservice.data.dto.OrganizationResponseDto;
@@ -35,16 +36,16 @@ public class OrganizationPayServiceImpl implements OrganizationPayService {
     @Value("${services.organization-pay.v1.name}")
     String organizationPayServiceV1Name;
 
-
     @Override
-    public AccountOnboardingResponseDto onboardOrganizationAccount(String organizationId, OrganizationAccountOnboardingRequestModelDto organizationAccountOnboardingRequestModelDto) {
+    public AccountOnboardingResponseDto onboardOrganizationAccount(String organizationId,
+            OrganizationAccountOnboardingRequestModelDto organizationAccountOnboardingRequestModelDto) {
         log.info("Calling {} Service for onboarding organization account", organizationPayServiceV1Name);
 
-        // Construct URL
-        String organizationPayServiceURI = eurekaClientUtil.getServiceUri(organizationPayServiceID);
-        String url = organizationPayServiceURI + organizationPayServiceV1 + "/onboarding/" + organizationId;
+        try {
+            // Construct URL
+            String organizationPayServiceURI = eurekaClientUtil.getServiceUri(organizationPayServiceID);
+            String url = organizationPayServiceURI + organizationPayServiceV1 + "/onboarding/" + organizationId;
 
-        try{
             AccountOnboardingResponseDto responseDto = webClient.post()
                     .uri(url)
                     .contentType(MediaType.APPLICATION_JSON)
@@ -56,24 +57,46 @@ public class OrganizationPayServiceImpl implements OrganizationPayService {
             return responseDto;
         } catch (WebClientResponseException webClientResponseException) {
             handleWebClientException(webClientResponseException);
-        } catch (Exception ex){
-            throw new OnboardingServiceRuntimeException(ex.getMessage());
+            // This will never be reached as handleWebClientException always throws an
+            // exception
+            return null;
+        } catch (Exception ex) {
+            log.error("Error onboarding organization account: {}", ex.getMessage(), ex);
+            throw new OnboardingServiceRuntimeException("Failed to onboard organization account: " + ex.getMessage());
         }
-        return null;
     }
 
     private void handleWebClientException(WebClientResponseException webClientResponseException) {
-        log.info("Handling organization WebClientException");
+        log.error("WebClientException from {} Service - Status: {}, Response: {}",
+                organizationPayServiceV1Name,
+                webClientResponseException.getStatusCode(),
+                webClientResponseException.getResponseBodyAsString());
 
-        // Convert error response to JSONObject
-        JSONObject response = new JSONObject(webClientResponseException.getResponseBodyAsString());
+        String responseBody = webClientResponseException.getResponseBodyAsString();
 
-        log.info("Error response from {} Service is: {}", organizationPayServiceV1Name, response);
+        try {
+            // Try to parse error response as JSONObject
+            JSONObject response = new JSONObject(responseBody);
+            log.info("Error response from {} Service is: {}", organizationPayServiceV1Name, response);
 
-        String errorCode = response.has("errorCode") ? response.getString("errorCode") : "";
-        String message = response.getString("message");
-        String details = response.has("details") ? response.getString("details") : "";
+            String errorCode = response.has("errorCode") ? response.getString("errorCode")
+                    : ApiConstants.INTERNAL_SERVER_ERROR;
+            String message = response.has("message") ? response.getString("message")
+                    : "Error from organization pay service";
+            String details = response.has("details") ? response.getString("details") : responseBody;
 
-        throw new OrganizationServiceException(errorCode, message, details);
+            throw new OrganizationServiceException(errorCode, message, details);
+        } catch (org.json.JSONException jsonException) {
+            // If response is not valid JSON, handle it as a generic error
+            log.error("Failed to parse error response as JSON: {}", responseBody);
+            String errorMessage = "Error from organization pay service: " + webClientResponseException.getStatusCode();
+            if (responseBody != null && !responseBody.isEmpty()) {
+                errorMessage += " - " + responseBody;
+            }
+            throw new OrganizationServiceException(
+                    ApiConstants.INTERNAL_SERVER_ERROR,
+                    errorMessage,
+                    "Unable to parse error response from organization pay service");
+        }
     }
 }

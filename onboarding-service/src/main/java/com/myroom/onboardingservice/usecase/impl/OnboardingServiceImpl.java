@@ -1,6 +1,5 @@
 package com.myroom.onboardingservice.usecase.impl;
 
-import com.myroom.onboardingservice.api.constants.ApiConstants;
 import com.myroom.onboardingservice.api.model.OrganizationAccountOnboardingRequestModel;
 import com.myroom.onboardingservice.api.model.OrganizationOnboardingRequestModel;
 import com.myroom.onboardingservice.api.model.OrganizationOnboardingResponseModel;
@@ -32,33 +31,52 @@ public class OnboardingServiceImpl implements OnboardingService {
     ApplicationEventPublisher eventPublisher;
 
     @Override
-    public OrganizationOnboardingResponseModel onboard(OrganizationOnboardingRequestModel onboardingRequestModel){
+    public OrganizationOnboardingResponseModel onboard(OrganizationOnboardingRequestModel onboardingRequestModel) {
         log.info("Creating organization for: {}", onboardingRequestModel);
-        OrganizationRequestDto organizationRequestDto = organizationMapper.toOrganizationRequestDto(onboardingRequestModel);
-        // Create organization
-        OrganizationResponseDto organizationDetails = organizationService.createOrganization(organizationRequestDto);
-        try{
+        try {
+            OrganizationRequestDto organizationRequestDto = organizationMapper
+                    .toOrganizationRequestDto(onboardingRequestModel);
+            // Create organization
+            OrganizationResponseDto organizationDetails = organizationService
+                    .createOrganization(organizationRequestDto);
+
+            if (organizationDetails == null) {
+                log.error("Organization creation returned null");
+                throw new OnboardingServiceRuntimeException(
+                        "Failed to create organization: Organization service returned null response");
+            }
+
             // Publish event for organization creation
-            eventPublisher.publishEvent(
-                    new OrganizationOnboardingEvent(
-                            this,
-                            OrganizationOnboardingEvent.EventType.ACCOUNT_CREATED,
-                            organizationDetails
-                    )
-            );
-            OrganizationOnboardingResponseModel responseModel = organizationMapper.toOrganizationOnboardingResponseModel(organizationDetails);
-            return  responseModel;
-        } catch (Exception ex){
-            log.error("Some error curred: {}", ex.getMessage());
-            throw new OnboardingServiceRuntimeException(ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR);
+            try {
+                eventPublisher.publishEvent(
+                        new OrganizationOnboardingEvent(
+                                this,
+                                OrganizationOnboardingEvent.EventType.ACCOUNT_CREATED,
+                                organizationDetails));
+            } catch (Exception eventEx) {
+                log.warn("Failed to publish organization creation event: {}", eventEx.getMessage());
+                // Don't fail the request if event publishing fails
+            }
+
+            OrganizationOnboardingResponseModel responseModel = organizationMapper
+                    .toOrganizationOnboardingResponseModel(organizationDetails);
+            return responseModel;
+        } catch (OnboardingServiceRuntimeException ex) {
+            // Re-throw runtime exceptions as-is
+            throw ex;
+        } catch (Exception ex) {
+            log.error("Error occurred during onboarding: {}", ex.getMessage(), ex);
+            throw new OnboardingServiceRuntimeException("Failed to onboard organization: " + ex.getMessage());
         }
     }
 
     @Override
-    public AccountOnboardingResponseDto onboardAccount(String organizationId, OrganizationAccountOnboardingRequestModel organizationAccountOnboardingRequestModel) {
+    public AccountOnboardingResponseDto onboardAccount(String organizationId,
+            OrganizationAccountOnboardingRequestModel organizationAccountOnboardingRequestModel) {
         log.info("Onboarding organization account for organizationId: {}", organizationId);
-        OrganizationAccountOnboardingRequestModelDto organizationAccountOnboardingRequestModelDto =
-                organizationMapper.toOrganizationAccountOnboardingRequestModelDto(organizationAccountOnboardingRequestModel);
-        return organizationPayService.onboardOrganizationAccount(organizationId, organizationAccountOnboardingRequestModelDto);
+        OrganizationAccountOnboardingRequestModelDto organizationAccountOnboardingRequestModelDto = organizationMapper
+                .toOrganizationAccountOnboardingRequestModelDto(organizationAccountOnboardingRequestModel);
+        return organizationPayService.onboardOrganizationAccount(organizationId,
+                organizationAccountOnboardingRequestModelDto);
     }
 }
