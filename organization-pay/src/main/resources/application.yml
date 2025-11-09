@@ -1,0 +1,50 @@
+server:
+  port: 8087
+
+services:
+  organization-service:
+    id: ORGANIZATION-SERVICE
+    v1:
+      api: /api/v1/organization-service
+      name: ORGANIZATION-SERVICE_V1
+
+  organization-pay:
+    id: ORGANIZATION-PAY-SERVICE
+    v1:
+      api: /api/v1/organizationpay
+      name: ORGANIZATION-PAY-SERVICE_V1
+
+
+spring:
+  application:
+    name: ORGANIZATION-PAY-SERVICE
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/myroom
+    username: root
+    password: leminhduc472005
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  main:
+    allow-circular-references: true
+
+
+# Stripe API
+stripe:
+  api:
+    secret-key: sk_test_51SHdxkRzecus95EIBT3TWygEqwkDd40RD0audbYpRscNTYbEJUDDs4gzZlsnl85VVu7NrliR0aaXVCjEHUHBJH9F00n0SE568w
+  endpointSecret: endpointSecret
+
+
+# Eureka Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
