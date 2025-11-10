@@ -17,26 +17,17 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 @RequestMapping(ApiConstants.BOOKING_SERVICE + ApiConstants.BOOKING_DASHBOARD + ApiConstants.BOOKING_RECORDS)
 public interface BookingRecordsDashboardResource {
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-            }
-    )
-    @Operation(method = "GET", summary = "Get Booking records")
-    @GetMapping
-    ResponseEntity<BookingsRecordsResponseModel> handleGetBookingRecords(
-            @Parameter(name = "organizationId", description = "start date")
-            @Schema(description = "Reference", example = "organizationId", required = true)
-            @RequestParam String organizationId,
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+        })
+        @Operation(method = "GET", summary = "Get Booking records")
+        @GetMapping
+        ResponseEntity<BookingsRecordsResponseModel> handleGetBookingRecords(
+                        @Parameter(name = "organizationId", description = "start date") @Schema(description = "Reference", example = "organizationId", required = true) @RequestParam("organizationId") String organizationId,
 
-            @Parameter(name = "startDate", description = "start date")
-            @Schema(description = "Reference", example = "date", required = true)
-            @RequestParam String startDate,
+                        @Parameter(name = "startDate", description = "start date") @Schema(description = "Reference", example = "date", required = true) @RequestParam("startDate") String startDate,
 
-            @Parameter(name = "endDate", description = "end date")
-            @Schema(description = "Reference", example = "date", required = true)
-            @RequestParam String endDate
-    );
+                        @Parameter(name = "endDate", description = "end date") @Schema(description = "Reference", example = "date", required = true) @RequestParam("endDate") String endDate);
 }
