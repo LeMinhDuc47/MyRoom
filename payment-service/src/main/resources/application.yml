@@ -8,7 +8,7 @@ myRoom:
 # Stripe API
 stripe:
   api:
-    secret-key: secret-key
+    secret-key: sk_test_51SHdxkRzecus95EIBT3TWygEqwkDd40RD0audbYpRscNTYbEJUDDs4gzZlsnl85VVu7NrliR0aaXVCjEHUHBJH9F00n0SE568w
   endpointSecret: endpointSecret
 
 
