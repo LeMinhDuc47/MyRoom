@@ -9,11 +9,15 @@ import com.myroom.bookingservice.api.constants.PaymentType;
 import com.myroom.bookingservice.data.model.BookingPaymentMetaDataModel;
 import com.myroom.bookingservice.data.model.RoomMetaDataModel;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingDataResponseModel {

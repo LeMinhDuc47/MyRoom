@@ -15,15 +15,13 @@ import java.util.Map;
 @RestController
 @RequestMapping(value = ApiConstants.ORGANIZATION_PAY_API_V1 + ApiConstants.ORGANIZATION_STRIPE_ACCOUNT_EVENTS)
 public interface OrganizationStripeAccountEventsResource {
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "POST", summary = "Accept account.updated events")
-    @PostMapping("/account-updated")
-    ResponseEntity updateAccountEvent(@RequestBody String payload, @RequestHeader Map<String, String> headers);
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "POST", summary = "Accept account.updated events")
+        @PostMapping("/account-updated")
+        ResponseEntity updateAccountEvent(@RequestBody String payload, @RequestHeader Map<String, String> headers);
 }

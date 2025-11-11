@@ -21,31 +21,26 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 @RequestMapping(value = ApiConstants.ONBOARDING_SERVICE + ApiConstants.ORGANIZATION_ONBOARDING)
 public interface OrganizationOnboardingResource {
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "POST", summary = "Onboard Organization")
-    @PostMapping
-    ResponseEntity<OrganizationOnboardingResponseModel> onboardOrganization(@RequestBody @Valid OrganizationOnboardingRequestModel onboardingRequestModel);
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "POST", summary = "Onboard Organization")
+        @PostMapping
+        ResponseEntity<OrganizationOnboardingResponseModel> onboardOrganization(
+                        @RequestBody @Valid OrganizationOnboardingRequestModel onboardingRequestModel);
 
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "POST", summary = "Onboard Organization Account")
-    @PostMapping("/{organizationId}/account")
-    ResponseEntity<OrganizationAccountOnboardingResponseModel> onboardOrganizationBankAccount(
-            @Parameter(name = "organizationId", description = "Organization Id")
-            @Schema(description = "organizationId", example = "658d6e2f9583cda663107426", required = true)
-            @PathVariable String organizationId,
-            @RequestBody @Valid OrganizationAccountOnboardingRequestModel organizationAccountOnboardingRequestModel);
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "POST", summary = "Onboard Organization Account")
+        @PostMapping("/{organizationId}/account")
+        ResponseEntity<OrganizationAccountOnboardingResponseModel> onboardOrganizationBankAccount(
+                        @Parameter(name = "organizationId", description = "Organization Id") @Schema(description = "organizationId", example = "658d6e2f9583cda663107426", required = true) @PathVariable("organizationId") String organizationId,
+                        @RequestBody @Valid OrganizationAccountOnboardingRequestModel organizationAccountOnboardingRequestModel);
 }

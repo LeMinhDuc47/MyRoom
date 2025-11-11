@@ -1,14 +1,20 @@
 package com.myroom.authserver.api.model;
 
+import org.checkerframework.checker.units.qual.A;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-//@JsonInclude(value = JsonInclude.Include.NON_NULL)
+@NoArgsConstructor
+@AllArgsConstructor
+// @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserResponseModel {
     @Schema(description = "uid", example = "zwtWhso1vTeEhPC9iBLZM5KMfdF3")

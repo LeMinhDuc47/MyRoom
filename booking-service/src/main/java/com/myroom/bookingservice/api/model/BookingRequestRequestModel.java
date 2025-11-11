@@ -5,14 +5,19 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myroom.bookingservice.api.constants.ContactDetails;
 import com.myroom.bookingservice.api.constants.Guest;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingRequestRequestModel {
+
     @Schema(description = "check-in", example = "2023-12-24T06:21:38.699Z", required = true)
     String checkIn;
 

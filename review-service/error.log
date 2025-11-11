@@ -1,1 +1,2 @@
 {"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"review-service"}
+{"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"review-service"}

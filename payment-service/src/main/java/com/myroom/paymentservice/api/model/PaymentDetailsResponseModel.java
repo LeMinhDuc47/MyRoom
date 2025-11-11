@@ -4,22 +4,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myroom.paymentservice.api.constants.PaymentMethodType;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PaymentDetailsResponseModel {
     @Schema(description = "payment type", example = "STRIPE", required = true)
     private String id;
 
-//    @Schema(description = "payment id", example = "cs_test_a1hzfOj0u9wL5JnnXYGBM8oWjNSKsTV5bdW66jlACOGh2ec4SpZurpiCBu", required = true)
-//    private String paymentId;
+    // @Schema(description = "payment id", example =
+    // "cs_test_a1hzfOj0u9wL5JnnXYGBM8oWjNSKsTV5bdW66jlACOGh2ec4SpZurpiCBu",
+    // required = true)
+    // private String paymentId;
 
     @Schema(description = "payment type", example = "STRIPE", required = true)
     PaymentMethodType type;

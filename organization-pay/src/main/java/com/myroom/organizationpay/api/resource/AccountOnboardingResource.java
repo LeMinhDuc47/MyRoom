@@ -19,52 +19,37 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 @RequestMapping(value = ApiConstants.ORGANIZATION_PAY_API_V1 + ApiConstants.ORGANIZATION_ACCOUNT_ONBOARDING)
 public interface AccountOnboardingResource {
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "POST", summary = "Onboard Organization Account(Stripe)")
-    @PostMapping("/{organizationId}")
-    ResponseEntity<AccountOnboardingResponseModel> accountOnboarding(
-            @Parameter(name = "organizationId", description = "organization id")
-            @Schema(description = "organizationId", example = "org_asdfkjnasd", required = true)
-            @PathVariable String organizationId,
-            @RequestBody @Valid AccountOnboardingRequestModel accountOnboardingRequestModel
-    );
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "POST", summary = "Onboard Organization Account(Stripe)")
+        @PostMapping("/{organizationId}")
+        ResponseEntity<AccountOnboardingResponseModel> accountOnboarding(
+                        @Parameter(name = "organizationId", description = "organization id") @Schema(description = "organizationId", example = "org_asdfkjnasd", required = true) @PathVariable("organizationId") String organizationId,
+                        @RequestBody @Valid AccountOnboardingRequestModel accountOnboardingRequestModel);
 
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "GET", summary = "Get account link for account_onboarding/account_update")
-    @GetMapping
-    ResponseEntity<String> getAccountLink(
-            @Parameter(name = "accountId", description = "stripe account id")
-            @Schema(description = "organizationId", example = "acct_1Mt0CORHFI4mz9Rw", required = true)
-            @RequestParam(name = "accountId", required = true) String accountId
-    );
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "GET", summary = "Get account link for account_onboarding/account_update")
+        @GetMapping
+        ResponseEntity<String> getAccountLink(
+                        @Parameter(name = "accountId", description = "stripe account id") @Schema(description = "organizationId", example = "acct_1Mt0CORHFI4mz9Rw", required = true) @RequestParam(name = "accountId", required = true) String accountId);
 
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
-                    @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
-                    @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
-                    @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
-            }
-    )
-    @Operation(method = "GET", summary = "Verify the account onboarding")
-    @GetMapping("/verify")
-    void verifyAccountOnboarding(
-            @Parameter(name = "accountId", description = "stripe account id")
-            @Schema(description = "organizationId", example = "acct_1Mt0CORHFI4mz9Rw", required = true)
-            @RequestParam(name = "accountId", required = true) String accountId
-    );
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = ApiConstants.MESSAGE_SUCCESS),
+                        @ApiResponse(responseCode = "400", description = ApiConstants.MESSAGE_BAD_REQUEST),
+                        @ApiResponse(responseCode = "500", description = ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR),
+                        @ApiResponse(responseCode = "503", description = ApiConstants.MESSAGE_SERVICE_UNAVAILABLE)
+        })
+        @Operation(method = "GET", summary = "Verify the account onboarding")
+        @GetMapping("/verify")
+        void verifyAccountOnboarding(
+                        @Parameter(name = "accountId", description = "stripe account id") @Schema(description = "organizationId", example = "acct_1Mt0CORHFI4mz9Rw", required = true) @RequestParam(name = "accountId", required = true) String accountId);
 }

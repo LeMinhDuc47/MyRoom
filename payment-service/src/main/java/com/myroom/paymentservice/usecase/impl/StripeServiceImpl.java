@@ -52,18 +52,19 @@ public class StripeServiceImpl implements StripeService {
     String endpointSecret;
 
     @PostConstruct
-    private void initialize(){
+    private void initialize() {
         // set the stripe secret api key
         Stripe.apiKey = SecretKey;
     }
 
     @Override
-    public Session createSession(StripeCreateSessionObjectDto stripeCreateSessionObjectDto){
+    public Session createSession(StripeCreateSessionObjectDto stripeCreateSessionObjectDto) {
         log.info("Creating Stripe Session Object for: {}", stripeCreateSessionObjectDto);
 
         try {
             Price price = createPrice(stripeServiceMapper.toStripeCreatePriceObjectDto(stripeCreateSessionObjectDto));
-            SessionCreateParams.PaymentIntentData paymentIntentData = createPaymentIntentData(stripeCreateSessionObjectDto);
+            SessionCreateParams.PaymentIntentData paymentIntentData = createPaymentIntentData(
+                    stripeCreateSessionObjectDto);
             String successUrl = paymentService.getSuccessUrl(stripeCreateSessionObjectDto.getBookingId());
             String cancelUrl = paymentService.getCancelUrl(stripeCreateSessionObjectDto.getBookingId());
 
@@ -72,17 +73,17 @@ public class StripeServiceImpl implements StripeService {
                     price,
                     paymentIntentData,
                     successUrl,
-                    cancelUrl
-            );
+                    cancelUrl);
 
             Session session = Session.create(params);
 
             log.info("Stripe Session Object created successfully: {}", session);
 
             return session;
-        } catch (StripeException stripeException){
+        } catch (StripeException stripeException) {
             log.error("Could not create stripe session: {}", stripeException.getMessage());
-            throw new InvalidPriceException(ApiConstants.INVALID_PRICE, ApiConstants.MESSAGE_INVALID_PRICE, stripeException.getMessage());
+            throw new InvalidPriceException(ApiConstants.INVALID_PRICE, ApiConstants.MESSAGE_INVALID_PRICE,
+                    stripeException.getMessage());
         }
     }
 
@@ -92,18 +93,20 @@ public class StripeServiceImpl implements StripeService {
         Event event = getEventObject(payload, headers);
         StripeObject stripeObject = getStripeObject(event);
         log.info("Handling event");
-        switch (event.getType()){
-            case "checkout.session.completed":{
+        switch (event.getType()) {
+            case "checkout.session.completed": {
                 stripePaymentEventService.handlePaymentCompletedUpdatedEvent(stripeObject);
                 break;
             }
-            //TODO: handle 'checkout.session.expired', 'checkout.session.async_payment_failed', 'checkout.session.async_payment_succeeded'
+            // TODO: handle 'checkout.session.expired',
+            // 'checkout.session.async_payment_failed',
+            // 'checkout.session.async_payment_succeeded'
             default:
 
         }
     }
 
-    private Price createPrice(StripeCreatePriceObjectDto stripeCreatePriceObjectDto){
+    private Price createPrice(StripeCreatePriceObjectDto stripeCreatePriceObjectDto) {
         log.info("Creating stripe Price Object");
 
         try {
@@ -113,23 +116,26 @@ public class StripeServiceImpl implements StripeService {
             log.info("Price Object created successfully: {}", price);
 
             return price;
-        }catch (StripeException stripeException){
+        } catch (StripeException stripeException) {
             log.error("Could not create price: {}", stripeException.getMessage());
-            throw new InvalidPriceException(ApiConstants.INVALID_PRICE, stripeException.getMessage(), stripeException.getMessage());
+            throw new InvalidPriceException(ApiConstants.INVALID_PRICE, stripeException.getMessage(),
+                    stripeException.getMessage());
         }
     }
 
-    private SessionCreateParams.PaymentIntentData createPaymentIntentData(StripeCreateSessionObjectDto stripeCreateSessionObjectDto){
+    private SessionCreateParams.PaymentIntentData createPaymentIntentData(
+            StripeCreateSessionObjectDto stripeCreateSessionObjectDto) {
         log.info("Creating Stripe PaymentIntentData object");
-        String roomOrganizationStripeAccountId = organizationPayService.getOrganizationStripeAccountId(stripeCreateSessionObjectDto.getOrganizationId());
-        Long myRoomOrganizationApplicationFeeAmount = paymentService.getApplicationFeeAmount(stripeCreateSessionObjectDto.getAmount());
+        String roomOrganizationStripeAccountId = organizationPayService.getOrganizationStripeAccountId(
+                stripeCreateSessionObjectDto.getOrganizationId(), stripeCreateSessionObjectDto.getUid());
+        Long myRoomOrganizationApplicationFeeAmount = paymentService
+                .getApplicationFeeAmount(stripeCreateSessionObjectDto.getAmount());
         SessionCreateParams.PaymentIntentData data = SessionCreateParams.PaymentIntentData.builder()
                 .setApplicationFeeAmount(myRoomOrganizationApplicationFeeAmount)
                 .setTransferData(
                         SessionCreateParams.PaymentIntentData.TransferData.builder()
                                 .setDestination(roomOrganizationStripeAccountId)
-                                .build()
-                )
+                                .build())
                 .build();
         log.info("PaymentIntentData Object created successfully: {}", data);
         return data;
@@ -139,11 +145,11 @@ public class StripeServiceImpl implements StripeService {
         log.info("Fetching StripeObject from event");
         log.info("Deserializing the nested object inside event");
         EventDataObjectDeserializer dataObjectDeserializer = event.getDataObjectDeserializer();
-        if(dataObjectDeserializer.getObject().isPresent()){
+        if (dataObjectDeserializer.getObject().isPresent()) {
             StripeObject stripeObject = dataObjectDeserializer.getObject().get();
             log.info("Fetched StripeObject: {}", stripeObject);
             return stripeObject;
-        }else{
+        } else {
             log.error("Deserialization failed");
             throw new PaymentServiceRuntimeException(ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR);
         }
@@ -154,14 +160,13 @@ public class StripeServiceImpl implements StripeService {
         String sigHeader = headers.get("stripe-signature");
         try {
             Event event = Webhook.constructEvent(
-                    payload, sigHeader, endpointSecret
-            );
+                    payload, sigHeader, endpointSecret);
             log.info("Fetched event object: {}", event);
             return event;
-        } catch (JsonSyntaxException ex){
+        } catch (JsonSyntaxException ex) {
             log.error("Invalid payload");
             throw new PaymentServiceRuntimeException(ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR);
-        } catch (SignatureVerificationException ex){
+        } catch (SignatureVerificationException ex) {
             log.error("Invalid signature");
             throw new PaymentServiceRuntimeException(ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR);
         }

@@ -4,13 +4,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myroom.organizationpay.api.constants.OrganizationAccountStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AccountDetailsResponseModel {
@@ -23,7 +27,7 @@ public class AccountDetailsResponseModel {
     @Schema(description = "status", example = "ACTIVE", required = true)
     private OrganizationAccountStatus status;
 
-    @Schema(description = "Stripe Account Details",  required = true)
+    @Schema(description = "Stripe Account Details", required = true)
     private OrganizationStripeAccountDetailsModel stripeAccountDetails;
 
     @Schema(description = "createdAt", example = "date", required = true)
