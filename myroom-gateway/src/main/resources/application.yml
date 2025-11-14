@@ -12,6 +12,11 @@ spring:
   application:
     name: MY_ROOM-GATEWAY
 
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
   cloud:
     gateway:
       default-filters:
@@ -24,6 +29,21 @@ spring:
             allowedHeaders: "*"
 
       routes:
+        # Login route with stricter IP-based rate limiting (approx 10 requests/min/IP)
+        - id: AUTH-SERVER-LOGIN
+          uri: lb://AUTH-SERVER
+          predicates:
+            - Path=/api/v1/auth/login
+          filters:
+            - AuthenticationFilter
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter:
+                  replenishRate: 1        # tokens per second (approximation)
+                  burstCapacity: 10       # allow short bursts
+                  requestedTokens: 1
+                key-resolver: '#{@ipKeyResolver}'
+
         - id: AUTH-SERVER
           uri: lb://AUTH-SERVER
           predicates:
@@ -37,6 +57,13 @@ spring:
             - Path=/api/v1/booking-service/**
           filters:
             - AuthenticationFilter
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter:
+                  replenishRate: 1       # ~5/min approximation with low burst
+                  burstCapacity: 5
+                  requestedTokens: 1
+                key-resolver: '#{@userKeyResolver}'
 
         - id: ROOM-SERVICE
           uri: lb://ROOM-SERVICE
@@ -44,6 +71,13 @@ spring:
             - Path=/api/v1/room-service/**
           filters:
             - AuthenticationFilter
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter:
+                  replenishRate: 2        # ~120/min approximation
+                  burstCapacity: 100
+                  requestedTokens: 1
+                key-resolver: '#{@userKeyResolver}'
 
         - id: ORGANIZATION-SERVICE
           uri: lb://ORGANIZATION-SERVICE
@@ -51,6 +85,13 @@ spring:
             - Path=/api/v1/organization-service/**
           filters:
             - AuthenticationFilter
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter:
+                  replenishRate: 2        # ~120/min approximation
+                  burstCapacity: 100
+                  requestedTokens: 1
+                key-resolver: '#{@userKeyResolver}'
 
         - id: ONBOARDING-SERVICE
           uri: lb://ONBOARDING-SERVICE
@@ -72,6 +113,13 @@ spring:
             - Path=/api/v1/payment-service/**
           filters:
             - AuthenticationFilter
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter:
+                  replenishRate: 1       # ~5/min approximation
+                  burstCapacity: 5
+                  requestedTokens: 1
+                key-resolver: '#{@userKeyResolver}'
 
         - id: REVIEW-SERVICE
           uri: lb://REVIEW-SERVICE
