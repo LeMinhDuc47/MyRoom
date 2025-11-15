@@ -54,17 +54,22 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     BookingRepository bookingRepository;
 
+    @Autowired
+    KafkaMessageService kafkaMessageService;
 
     @Override
-    public BookingOrderResponseModel createBookingOrder(String bookingRequestId, BookingOrderRequestModel bookingOrderRequestModel) {
+    public BookingOrderResponseModel createBookingOrder(String bookingRequestId,
+            BookingOrderRequestModel bookingOrderRequestModel) {
         bookingOrderRequestModel.setBookingRequestId(bookingRequestId);
 
         BookingRequestDetails bookingRequestDetails = bookingRequestService.getBookingRequestData(bookingRequestId);
 
-        BookingRequestRequestModel bookingRequestModel = bookingRequestMapper.toBookingRequestModel(bookingRequestDetails);
-        AppConstants.GenericValidInvalidEnum validation = bookingRequestValidationService.validateBookingRequestData(bookingRequestModel);
+        BookingRequestRequestModel bookingRequestModel = bookingRequestMapper
+                .toBookingRequestModel(bookingRequestDetails);
+        AppConstants.GenericValidInvalidEnum validation = bookingRequestValidationService
+                .validateBookingRequestData(bookingRequestModel);
 
-        if(validation.equals(AppConstants.GenericValidInvalidEnum.VALID)){
+        if (validation.equals(AppConstants.GenericValidInvalidEnum.VALID)) {
             BookingOrderResponseModel bookingOrderResponseModel = null;
 
             validateCurrentUser(bookingOrderRequestModel.getUid(), bookingRequestDetails.getUid());
@@ -73,32 +78,36 @@ public class BookingServiceImpl implements BookingService {
 
             PaymentType type = bookingRequestDetails.getPaymentType();
 
-            switch (type){
-                case PAY_AT_HOTEL:{
+            switch (type) {
+                case PAY_AT_HOTEL: {
                     updateStatus(bookingDetails, BookingStatus.PAY_AT_HOTEL);
                     log.info("Redirecting to {} as the payment type is: {}", type, type);
                     bookingOrderResponseModel = bookingMapper.toBookingOrderResponseModel(bookingDetails);
-                    bookingRequestService.updateStatus(bookingDetails.getBookingRequestId(), BookingRequestStatus.BOOKED);
+                    bookingRequestService.updateStatus(bookingDetails.getBookingRequestId(),
+                            BookingRequestStatus.BOOKED);
                     break;
                 }
 
-                case ONLINE_PAYMENT:{
+                case ONLINE_PAYMENT: {
                     log.info("Redirecting to {} for payment as the payment type is: {}", type, type);
                     OnlinePaymentOrderResponseDto onlinePaymentOrderResponseDto = doOnlinePayment(bookingDetails);
-                    bookingOrderResponseModel = bookingMapper.toBookingOrderResponseModel(onlinePaymentOrderResponseDto, bookingDetails);
+                    bookingOrderResponseModel = bookingMapper.toBookingOrderResponseModel(onlinePaymentOrderResponseDto,
+                            bookingDetails);
                     break;
                 }
 
-                default:{
+                default: {
                     log.info("Booking cannot be processed due to an invalid payment type: {}", type);
-                    throw new InvalidPaymentTypeException(ApiConstants.INVALID_PAYMENT_TYPE, "Invalid payment type", "");
+                    throw new InvalidPaymentTypeException(ApiConstants.INVALID_PAYMENT_TYPE, "Invalid payment type",
+                            "");
                 }
-           }
+            }
             log.info("Booking Order: {}", bookingOrderResponseModel);
             return bookingOrderResponseModel;
-        }else{
+        } else {
             log.error("Invalid Booking Request: {}", bookingRequestDetails);
-            throw new InvalidBookingRequestDataException(ApiConstants.INVALID_BOOKING_REQUEST_DATA, "Booking cannot be processed due to an invalid booking request data", "");
+            throw new InvalidBookingRequestDataException(ApiConstants.INVALID_BOOKING_REQUEST_DATA,
+                    "Booking cannot be processed due to an invalid booking request data", "");
         }
     }
 
@@ -106,9 +115,10 @@ public class BookingServiceImpl implements BookingService {
     public BookingDataResponseModel getBookingDataByBookingRequestId(String bookingRequestId) {
         log.info("Fetching the bookingId for booking request id:{}", bookingRequestId);
         Optional<String> bookingId = bookingRepository.findBookingIdByBookingRequestId(bookingRequestId);
-        if(bookingId.isEmpty()){
+        if (bookingId.isEmpty()) {
             log.error("Could not find any booking for for bookingRequestId:{}", bookingRequestId);
-            throw new BookingRequestNotFoundException(ApiConstants.NOT_FOUND, "Could not find any booking for bookingRequestId:"+bookingRequestId, null);
+            throw new BookingRequestNotFoundException(ApiConstants.NOT_FOUND,
+                    "Could not find any booking for bookingRequestId:" + bookingRequestId, null);
         }
         log.info("bookingId for bookingRequestId:{} is :{}", bookingRequestId, bookingId.get());
         return getBookingDataById(bookingId.get());
@@ -119,12 +129,13 @@ public class BookingServiceImpl implements BookingService {
         return bookingMapper.toBookingDataResponseModel(getBookingDataB(id));
     }
 
-    private BookingDetails getBookingDataB(String id){
+    private BookingDetails getBookingDataB(String id) {
         log.info("Fetching booking data for bookingId:{}", id);
         Optional<BookingDetails> bookingDetails = bookingRepository.findById(id);
-        if(bookingDetails.isEmpty()){
+        if (bookingDetails.isEmpty()) {
             log.error("Could not find any booking for bookingId:{}", id);
-            throw new BookingNotFoundException(ApiConstants.NOT_FOUND, "Could not find any booking for bookingId:"+id, null);
+            throw new BookingNotFoundException(ApiConstants.NOT_FOUND, "Could not find any booking for bookingId:" + id,
+                    null);
         }
         log.info("Fetched booking data:{}", bookingDetails.get());
         return bookingDetails.get();
@@ -133,16 +144,45 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void handleBookingPaymentCancel(String bookingId) {
         log.info("handling booking payment cancel for bookingId:{}", bookingId);
-        // TODO: Delete the booking request and booking record
+        // Compensation: mark booking as CANCELLED and update related booking-request
+        BookingDetails bookingDetails = getBookingDataB(bookingId);
+        try {
+            bookingDetails.setStatus(BookingStatus.CANCELLED);
+            BookingDetails saved = bookingRepository.save(bookingDetails);
+            log.info("Updated booking to CANCELLED: {}", saved.getId());
+        } catch (Exception ex) {
+            log.error("Failed to cancel booking {}: {}", bookingId, ex.getMessage());
+            throw new BookingServiceRuntimeException(ex.getMessage());
+        }
+
+        // Update booking-request status to CANCELLED
+        try {
+            bookingRequestService.updateStatus(bookingDetails.getBookingRequestId(), BookingRequestStatus.CANCELLED);
+            log.info("Updated booking request {} to CANCELLED", bookingDetails.getBookingRequestId());
+        } catch (Exception ex) {
+            log.error("Failed to update booking-request {} to CANCELLED: {}", bookingDetails.getBookingRequestId(),
+                    ex.getMessage());
+        }
+
+        // Notify via mail topic (compensation notification)
+        try {
+            org.json.JSONObject payload = new org.json.JSONObject();
+            payload.put("bookingId", bookingId);
+            payload.put("status", "canceled");
+            kafkaMessageService.sendMessage("booking.mail", payload.toString());
+        } catch (Exception ex) {
+            log.error("Failed to publish cancellation mail event for booking {}: {}", bookingId, ex.getMessage());
+        }
     }
 
     @Override
     public void updateBookingStatusAndBookingPaymentMetaDataModel(String bookingId, String status) {
         log.info("Updating booking status and paymentMetaData for bookingId:{}", bookingId);
         BookingDetails bookingDetails = getBookingDataB(bookingId);
-        if("complete".equals(status)){
+        if ("complete".equals(status)) {
             bookingDetails.setStatus(BookingStatus.CONFIRMED);
-            StripePaymentServiceProvider stripePaymentServiceProvider = (StripePaymentServiceProvider) bookingDetails.getPaymentMetaDataModel().getStripePaymentServiceProvider();
+            StripePaymentServiceProvider stripePaymentServiceProvider = (StripePaymentServiceProvider) bookingDetails
+                    .getPaymentMetaDataModel().getStripePaymentServiceProvider();
             stripePaymentServiceProvider.setStatus(StripePaymentServiceProvider.StripePaymentStatus.complete);
 
             BookingDetails savedBookingDetails = bookingRepository.save(bookingDetails);
@@ -164,7 +204,7 @@ public class BookingServiceImpl implements BookingService {
                 predicates.add(cb.like(root.get("id"), "%" + criteria.getId() + "%"));
             }
 
-            if(criteria.getUid() != null){
+            if (criteria.getUid() != null) {
                 predicates.add(cb.like(root.get("uid"), criteria.getUid()));
             }
 
@@ -178,21 +218,27 @@ public class BookingServiceImpl implements BookingService {
                 query.orderBy(cb.desc(root.get("amount")));
             }
 
-            if (criteria.getBookingDate() != null && criteria.getBookingDate().getSortingType().equals(SortingType.ASC)) {
+            if (criteria.getBookingDate() != null
+                    && criteria.getBookingDate().getSortingType().equals(SortingType.ASC)) {
                 query.orderBy(cb.asc(root.get("bookingDate")));
-            } else if (criteria.getBookingDate() != null && criteria.getBookingDate().getSortingType().equals(SortingType.DESC)) {
+            } else if (criteria.getBookingDate() != null
+                    && criteria.getBookingDate().getSortingType().equals(SortingType.DESC)) {
                 query.orderBy(cb.desc(root.get("bookingDate")));
             }
 
-            if (criteria.getCheckInDate() != null && criteria.getCheckInDate().getSortingType().equals(SortingType.ASC)) {
+            if (criteria.getCheckInDate() != null
+                    && criteria.getCheckInDate().getSortingType().equals(SortingType.ASC)) {
                 query.orderBy(cb.asc(root.get("checkIn")));
-            } else if (criteria.getCheckInDate() != null && criteria.getCheckInDate().getSortingType().equals(SortingType.DESC)) {
+            } else if (criteria.getCheckInDate() != null
+                    && criteria.getCheckInDate().getSortingType().equals(SortingType.DESC)) {
                 query.orderBy(cb.desc(root.get("checkIn")));
             }
 
-            if (criteria.getCheckOutDate() != null && criteria.getCheckOutDate().getSortingType().equals(SortingType.ASC)) {
+            if (criteria.getCheckOutDate() != null
+                    && criteria.getCheckOutDate().getSortingType().equals(SortingType.ASC)) {
                 query.orderBy(cb.asc(root.get("checkOut")));
-            } else if (criteria.getCheckOutDate() != null && criteria.getCheckOutDate().getSortingType().equals(SortingType.DESC)) {
+            } else if (criteria.getCheckOutDate() != null
+                    && criteria.getCheckOutDate().getSortingType().equals(SortingType.DESC)) {
                 query.orderBy(cb.desc(root.get("checkOut")));
             }
 
@@ -203,32 +249,37 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public BookingDataResponseModel updateBooking(String bookingId, UpdateBookingOrderRequestModel updateBookingOrderRequestModel) {
-        log.info("Updating the booking details for bookingId: {} with data:{}", bookingId, updateBookingOrderRequestModel);
+    public BookingDataResponseModel updateBooking(String bookingId,
+            UpdateBookingOrderRequestModel updateBookingOrderRequestModel) {
+        log.info("Updating the booking details for bookingId: {} with data:{}", bookingId,
+                updateBookingOrderRequestModel);
 
         log.info("Fetching the previous data");
         Optional<BookingDetails> bookingDetails = bookingRepository.findById(bookingId);
-        if(bookingDetails.isEmpty()){
+        if (bookingDetails.isEmpty()) {
             log.error("Could not find any booking for bookingId:{}", bookingId);
-            throw new BookingNotFoundException(ApiConstants.NOT_FOUND, "Could not find any booking for bookingId: "+bookingId, null);
+            throw new BookingNotFoundException(ApiConstants.NOT_FOUND,
+                    "Could not find any booking for bookingId: " + bookingId, null);
         }
         log.info("Fetched booking data:{}", bookingDetails.get());
 
         BookingDetails booking = bookingDetails.get();
 
-        try{
-            BookingDetails updatedBookingData = updateTheBookingDetailsWithNewData(booking, updateBookingOrderRequestModel);
+        try {
+            BookingDetails updatedBookingData = updateTheBookingDetailsWithNewData(booking,
+                    updateBookingOrderRequestModel);
             BookingDetails savedData = bookingRepository.save(updatedBookingData);
             log.info("Updated booking: {}", savedData);
             return bookingMapper.toBookingDataResponseModel(savedData);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.info("Some error occurred while updating the booking details: {}", ex.getMessage());
             throw new BookingServiceRuntimeException(ex.getMessage());
         }
     }
 
-    private BookingDetails updateTheBookingDetailsWithNewData(BookingDetails booking, UpdateBookingOrderRequestModel updateBookingOrderRequestModel) {
-        if(updateBookingOrderRequestModel.getStatus() != null){
+    private BookingDetails updateTheBookingDetailsWithNewData(BookingDetails booking,
+            UpdateBookingOrderRequestModel updateBookingOrderRequestModel) {
+        if (updateBookingOrderRequestModel.getStatus() != null) {
             booking.setStatus(updateBookingOrderRequestModel.getStatus());
         }
         return booking;
@@ -244,21 +295,23 @@ public class BookingServiceImpl implements BookingService {
 
     private OnlinePaymentOrderResponseDto doOnlinePayment(BookingDetails bookingDetails) {
         log.info("Creating booking payment order.");
-        switch (bookingDetails.getPaymentMetaDataModel().getPaymentMethodType()){
-            case STRIPE : {
+        switch (bookingDetails.getPaymentMetaDataModel().getPaymentMethodType()) {
+            case STRIPE: {
                 log.info("Redirecting to {} payment service provider for payment order , as the payment method is: {}",
                         bookingDetails.getPaymentMetaDataModel().getPaymentMethodType(),
-                        bookingDetails.getPaymentMetaDataModel().getPaymentMethodType()
-                );
+                        bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
                 StripePaymentOrderResponseDto stripePaymentOrderResponseDto = createStripePaymentOrder(bookingDetails);
-                OnlinePaymentOrderResponseDto onlinePaymentOrderResponseDto = bookingMapper.toOnlinePaymentOrderResponseDto(stripePaymentOrderResponseDto);
+                OnlinePaymentOrderResponseDto onlinePaymentOrderResponseDto = bookingMapper
+                        .toOnlinePaymentOrderResponseDto(stripePaymentOrderResponseDto);
                 log.info("Created booking payment order: {}", onlinePaymentOrderResponseDto);
                 return onlinePaymentOrderResponseDto;
             }
 
             default: {
-                log.info("Booking cannot be processed due to invalid payment method type: {}", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
-                throw new InvalidPaymentMethodTypeException(ApiConstants.INVALID_PAYMENT_METHOD_TYPE, "Invalid payment method type", "");
+                log.info("Booking cannot be processed due to invalid payment method type: {}",
+                        bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
+                throw new InvalidPaymentMethodTypeException(ApiConstants.INVALID_PAYMENT_METHOD_TYPE,
+                        "Invalid payment method type", "");
             }
         }
     }
@@ -266,39 +319,48 @@ public class BookingServiceImpl implements BookingService {
     private StripePaymentOrderResponseDto createStripePaymentOrder(BookingDetails bookingDetails) {
         PaymentOrderRequestDto paymentOrderRequestDto = bookingMapper.toPaymentOrderRequestDto(bookingDetails);
 
-        log.info("Creating {} payment order for: {}", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType(), paymentOrderRequestDto);
+        log.info("Creating {} payment order for: {}", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType(),
+                paymentOrderRequestDto);
         PaymentOrderResponseDto paymentOrderResponseDto = paymentService.createPaymentOrder(paymentOrderRequestDto);
-        log.info("Created {} payment order: {}", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType(), paymentOrderResponseDto);
+        log.info("Created {} payment order: {}", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType(),
+                paymentOrderResponseDto);
 
         updateBookingDetails(bookingDetails, paymentOrderResponseDto);
-        log.info("Updated bookingDetails with {} data", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
+        log.info("Updated bookingDetails with {} data",
+                bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
 
-        StripePaymentOrderResponseDto stripePaymentOrderResponseDto = bookingMapper.toStripePaymentOrderResponseDto(paymentOrderResponseDto);
+        StripePaymentOrderResponseDto stripePaymentOrderResponseDto = bookingMapper
+                .toStripePaymentOrderResponseDto(paymentOrderResponseDto);
 
         return stripePaymentOrderResponseDto;
     }
 
     private void updateBookingDetails(BookingDetails bookingDetails, PaymentOrderResponseDto paymentOrderResponseDto) {
-        log.info("Updating bookingDetails with {} Payment Service Provider data", bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
-        StripePaymentServiceProvider stripePaymentServiceProvider = bookingMapper.toStripePaymentServiceProvider(paymentOrderResponseDto);
+        log.info("Updating bookingDetails with {} Payment Service Provider data",
+                bookingDetails.getPaymentMetaDataModel().getPaymentMethodType());
+        StripePaymentServiceProvider stripePaymentServiceProvider = bookingMapper
+                .toStripePaymentServiceProvider(paymentOrderResponseDto);
         BookingPaymentMetaDataModel bookingPaymentMetaDataModel = bookingDetails.getPaymentMetaDataModel();
         bookingPaymentMetaDataModel.setStripePaymentServiceProvider(stripePaymentServiceProvider);
-        try{
+        try {
             bookingRepository.updatePaymentMetaDataModelById(bookingDetails.getId(), bookingPaymentMetaDataModel);
             log.info("Updated booking details with payment service provider");
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.info("Some error occurred while updating the booking details: {}", ex.getMessage());
             throw new BookingServiceRuntimeException(ex.getMessage());
         }
     }
 
-    private BookingDetails createBookingRecord(BookingOrderRequestModel bookingOrderRequestModel, BookingRequestDetails bookingRequestDetails) {
+    private BookingDetails createBookingRecord(BookingOrderRequestModel bookingOrderRequestModel,
+            BookingRequestDetails bookingRequestDetails) {
         log.info("creating booking record");
 
         RoomDetailsDto roomDetailsDto = roomService.getRoom(bookingRequestDetails.getRoomId());
         String amount = roomMapper.toAmount(roomDetailsDto);
         RoomMetaDataModel roomMetaDataModel = roomMapper.toRoomMetaDataModel(roomDetailsDto);
-        BookingPaymentMetaDataModel bookingPaymentMetaDataModel = roomMapper.toBookingPaymentMetaDataModel(bookingRequestDetails.getPaymentMethodType(), amount, roomMetaDataModel.getPrices().getCurrency(), null);
+        BookingPaymentMetaDataModel bookingPaymentMetaDataModel = roomMapper.toBookingPaymentMetaDataModel(
+                bookingRequestDetails.getPaymentMethodType(), amount, roomMetaDataModel.getPrices().getCurrency(),
+                null);
         BookingStatus status = BookingStatus.PENDING_PAYMENT;
         Instant bookingDate = Instant.now();
 
@@ -309,32 +371,32 @@ public class BookingServiceImpl implements BookingService {
                     roomMetaDataModel,
                     bookingPaymentMetaDataModel,
                     status,
-                    bookingDate
-            );
+                    bookingDate);
 
             bookingDetails = bookingRepository.save(bookingDetails);
 
             log.info("created booking record: {}", bookingDetails);
 
             return bookingDetails;
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.error("Some error curred: {}", ex.getMessage());
             throw new BookingServiceRuntimeException(ex.getMessage());
         }
     }
 
     private BookingDetails createBookingDetails(BookingRequestDetails bookingRequestDetails,
-                                                String amount,
-                                                RoomMetaDataModel roomMetaDetails,
-                                                BookingPaymentMetaDataModel bookingPaymentMetaDataModel,
-                                                BookingStatus status,
-                                                Instant bookingDate) {
+            String amount,
+            RoomMetaDataModel roomMetaDetails,
+            BookingPaymentMetaDataModel bookingPaymentMetaDataModel,
+            BookingStatus status,
+            Instant bookingDate) {
         BookingDetails bookingDetails = new BookingDetails();
         bookingDetails.setBookingRequestId(bookingRequestDetails.getId());
         bookingDetails.setOrganizationId(bookingRequestDetails.getOrganizationId());
         bookingDetails.setCheckIn(Instant.parse(bookingRequestDetails.getCheckIn()));
         bookingDetails.setCheckOut(Instant.parse(bookingRequestDetails.getCheckOut()));
-        bookingDetails.setPeopleCount((long) (bookingRequestDetails.getGuests().getAdults() + bookingRequestDetails.getGuests().getChildren()));
+        bookingDetails.setPeopleCount((long) (bookingRequestDetails.getGuests().getAdults()
+                + bookingRequestDetails.getGuests().getChildren()));
         bookingDetails.setGuests(bookingRequestDetails.getGuests());
         bookingDetails.setContactDetails(bookingRequestDetails.getContactDetails());
         bookingDetails.setPaymentType(bookingRequestDetails.getPaymentType());
@@ -347,11 +409,13 @@ public class BookingServiceImpl implements BookingService {
         return bookingDetails;
     }
 
-    private void validateCurrentUser(String currentUserUid, String prevUserUid){
+    private void validateCurrentUser(String currentUserUid, String prevUserUid) {
         log.info("Validating current user is the one who created the booking request");
-        if(currentUserUid.equals(prevUserUid) == false) {
-            log.error("Unauthorized access: Current user '{}' is not the creator of the booking request", currentUserUid);
-            throw new BookingRequestUnauthorizedAccessException(ApiConstants.UNAUTHORIZED, "You do not have permission to modify this booking request.", "");
+        if (currentUserUid.equals(prevUserUid) == false) {
+            log.error("Unauthorized access: Current user '{}' is not the creator of the booking request",
+                    currentUserUid);
+            throw new BookingRequestUnauthorizedAccessException(ApiConstants.UNAUTHORIZED,
+                    "You do not have permission to modify this booking request.", "");
         }
         log.info("Validated current user");
     }

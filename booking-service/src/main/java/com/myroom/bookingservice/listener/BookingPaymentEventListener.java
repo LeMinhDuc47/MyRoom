@@ -25,7 +25,12 @@ public class BookingPaymentEventListener {
             JSONObject jsonPayload = new JSONObject(payload);
             String bookingId = jsonPayload.getString("bookingId");
             String status = jsonPayload.getString("status");
-            bookingService.updateBookingStatusAndBookingPaymentMetaDataModel(bookingId, status);
+            if ("complete".equals(status)) {
+                bookingService.updateBookingStatusAndBookingPaymentMetaDataModel(bookingId, status);
+            } else {
+                // treat any non-complete payment status as cancel/compensation
+                bookingService.handleBookingPaymentCancel(bookingId);
+            }
         } catch (JSONException jsonException) {
             log.error("Invalid message received: {}", jsonException.getMessage());
             throw jsonException;
