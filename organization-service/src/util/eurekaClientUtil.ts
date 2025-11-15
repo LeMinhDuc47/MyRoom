@@ -1,7 +1,5 @@
-import eurekaClient from "../config/eurekaClientConfig";
-
-export function getInstance(serviceName: string): string {
-  const instances: [any] = eurekaClient.getInstancesByAppId(serviceName);
+export function getInstance(client: any, serviceName: string): string {
+  const instances: [any] = client.getInstancesByAppId(serviceName);
   let URI = "";
   if (instances && instances.length > 0) {
     const instance = instances[0];

@@ -1291,3 +1291,1737 @@
 {"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
 {"level":"info","message":"room-service is running at http://localhost:8086","service":"organization-service"}
 {"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-11-14T09:12:41.830Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-11-15T09:12:41.830Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"organization-service"}
+{"availableDates.endDate":{"$lte":"2025-11-15T09:12:41.830Z"},"availableDates.startDate":{"$gte":"2025-11-14T09:12:41.830Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":2681}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":2681},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":9033}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":9033},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":8663}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":8663},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"%7B%22operator%22:%22GREATER_THAN_OR_EQUAL%22,%22cost%22:8663%7D","features":"[%22Smoking allowed%22]","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":8663},"features":{"$all":["Smoking allowed"]},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":10000}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":10000},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: null, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-10T14:01:31.692Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received review creation request for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Creating review  for: ","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"ok","roomId":"6911f03b056bddacd64da165","service":"organization-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Attempting review creation with input: ","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"ok","roomId":"6911f03b056bddacd64da165","service":"organization-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Inserting new review for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"fetching REVIEW-SERVICE URI from discovery server","service":"organization-service"}
+{"level":"info","message":"fetched REVIEW-SERVICE URI: http://127.0.0.1:8088","service":"organization-service"}
+{"level":"info","message":"Review inserted successfully: ","review":{"id":"6916f2e0ea7ca9d9f151bceb","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"ok","roomId":"6911f03b056bddacd64da165","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"},"service":"organization-service","sumOfRatings":5,"totalReviewCount":1}
+{"level":"info","message":"Updating overall rating of room with roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","address":"init","amenities":"init","availableDates":"init","bookingStatus":"init","capacity":"init","checkInTypes":"init","city":"init","cost":"init","createdAt":"init","createdBy":"init","description":"init","features":"init","images":"init","mainImage":"init","note":"init","organizationId":"init","prices":"init","rating":"init","rating.rating":"default","title":"init","updatedAt":"init","updatedBy":"init"},"states":{"default":{"rating.rating":true},"init":{"__v":true,"_id":true,"address":true,"amenities":true,"availableDates":true,"bookingStatus":true,"capacity":true,"checkInTypes":true,"city":true,"cost":true,"createdAt":true,"createdBy":true,"description":true,"features":true,"images":true,"mainImage":true,"note":true,"organizationId":true,"prices":true,"rating":true,"title":true,"updatedAt":true,"updatedBy":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"6911f03b056bddacd64da165","address":"Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa","amenities":[],"availableDates":{"endDate":"2025-12-31T13:59:29.473Z","startDate":"2025-01-01T13:59:29.473Z"},"bookingStatus":"AVAILABLE","capacity":20,"checkInTypes":["ONLINE_PAYMENT","PAY_AT_HOTEL","ONLINE_PAYMENT","PAY_AT_HOTEL","PAY_AT_HOTEL","ONLINE_PAYMENT"],"city":"Thanh Hóa","cost":2200000,"createdAt":"2025-11-10T14:01:31.692Z","createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.","features":[],"images":[],"mainImage":"https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg","note":"Hotline:  0899 000 789  \nTel: 0237 3822 678","organizationId":"6911e7620f65b4e6da72c14d","prices":{"cleaningFee":1000000,"currency":"inr","price":1000000,"roomService":200000},"rating":{"outOf":5,"rating":5},"title":"Dragon Sea hotel","updatedAt":"2025-11-14T09:14:08.933Z","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"},"level":"info","message":"Overall rating updated successfully: ","service":"organization-service"}
+{"level":"info","message":"Review created successfully: ","review":{"review":{"id":"6916f2e0ea7ca9d9f151bceb","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"ok","roomId":"6911f03b056bddacd64da165","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"},"sumOfRatings":5,"totalReviewCount":1},"room":{"address":"Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa","amenities":[],"availableDates":{"endDate":"2025-12-31T13:59:29.473Z","startDate":"2025-01-01T13:59:29.473Z"},"bookingStatus":"AVAILABLE","capacity":20,"checkInTypes":["ONLINE_PAYMENT","PAY_AT_HOTEL","ONLINE_PAYMENT","PAY_AT_HOTEL","PAY_AT_HOTEL","ONLINE_PAYMENT"],"city":"Thanh Hóa","cost":2200000,"createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.","features":[],"id":"6911f03b056bddacd64da165","images":[],"mainImage":"https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg","note":"Hotline:  0899 000 789  \nTel: 0237 3822 678","organizationId":"6911e7620f65b4e6da72c14d","prices":{"cleaningFee":1000000,"currency":"inr","price":1000000,"roomService":200000},"rating":{"outOf":5,"rating":5},"title":"Dragon Sea hotel","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"},"service":"organization-service","success":true}
+{"level":"info","message":"Received review creation request for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Creating review  for: ","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"tuyệt vời","roomId":"6911f03b056bddacd64da165","service":"organization-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Attempting review creation with input: ","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"tuyệt vời","roomId":"6911f03b056bddacd64da165","service":"organization-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Inserting new review for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"fetching REVIEW-SERVICE URI from discovery server","service":"organization-service"}
+{"level":"info","message":"fetched REVIEW-SERVICE URI: http://127.0.0.1:8088","service":"organization-service"}
+{"level":"info","message":"Review inserted successfully: ","review":{"id":"6916f302ea7ca9d9f151bcee","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"tuyệt vời","roomId":"6911f03b056bddacd64da165","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"},"service":"organization-service","sumOfRatings":10,"totalReviewCount":2}
+{"level":"info","message":"Updating overall rating of room with roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","address":"init","amenities":"init","availableDates":"init","bookingStatus":"init","capacity":"init","checkInTypes":"init","city":"init","cost":"init","createdAt":"init","createdBy":"init","description":"init","features":"init","images":"init","mainImage":"init","note":"init","organizationId":"init","prices":"init","rating":"init","rating.rating":"default","title":"init","updatedAt":"init","updatedBy":"init"},"states":{"default":{"rating.rating":true},"init":{"__v":true,"_id":true,"address":true,"amenities":true,"availableDates":true,"bookingStatus":true,"capacity":true,"checkInTypes":true,"city":true,"cost":true,"createdAt":true,"createdBy":true,"description":true,"features":true,"images":true,"mainImage":true,"note":true,"organizationId":true,"prices":true,"rating":true,"title":true,"updatedAt":true,"updatedBy":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"6911f03b056bddacd64da165","address":"Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa","amenities":[],"availableDates":{"endDate":"2025-12-31T13:59:29.473Z","startDate":"2025-01-01T13:59:29.473Z"},"bookingStatus":"AVAILABLE","capacity":20,"checkInTypes":["ONLINE_PAYMENT","PAY_AT_HOTEL","ONLINE_PAYMENT","PAY_AT_HOTEL","PAY_AT_HOTEL","ONLINE_PAYMENT"],"city":"Thanh Hóa","cost":2200000,"createdAt":"2025-11-10T14:01:31.692Z","createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.","features":[],"images":[],"mainImage":"https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg","note":"Hotline:  0899 000 789  \nTel: 0237 3822 678","organizationId":"6911e7620f65b4e6da72c14d","prices":{"cleaningFee":1000000,"currency":"inr","price":1000000,"roomService":200000},"rating":{"outOf":5,"rating":5},"title":"Dragon Sea hotel","updatedAt":"2025-11-14T09:14:42.120Z","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"},"level":"info","message":"Overall rating updated successfully: ","service":"organization-service"}
+{"level":"info","message":"Review created successfully: ","review":{"review":{"id":"6916f302ea7ca9d9f151bcee","organizationId":"6911e7620f65b4e6da72c14d","rating":5,"reviewText":"tuyệt vời","roomId":"6911f03b056bddacd64da165","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"},"sumOfRatings":10,"totalReviewCount":2},"room":{"address":"Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa","amenities":[],"availableDates":{"endDate":"2025-12-31T13:59:29.473Z","startDate":"2025-01-01T13:59:29.473Z"},"bookingStatus":"AVAILABLE","capacity":20,"checkInTypes":["ONLINE_PAYMENT","PAY_AT_HOTEL","ONLINE_PAYMENT","PAY_AT_HOTEL","PAY_AT_HOTEL","ONLINE_PAYMENT"],"city":"Thanh Hóa","cost":2200000,"createdBy":"3edcBmQfHXg8WUGXCKdUizicAe43","description":"Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.","features":[],"id":"6911f03b056bddacd64da165","images":[],"mainImage":"https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg","note":"Hotline:  0899 000 789  \nTel: 0237 3822 678","organizationId":"6911e7620f65b4e6da72c14d","prices":{"cleaningFee":1000000,"currency":"inr","price":1000000,"roomService":200000},"rating":{"outOf":5,"rating":5},"title":"Dragon Sea hotel","updatedBy":"3edcBmQfHXg8WUGXCKdUizicAe43"},"service":"organization-service","success":true}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","limit":"10","message":"The query is: ","page":"1","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-11-14T10:12:49.746Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-11-15T10:12:49.746Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"organization-service"}
+{"availableDates.endDate":{"$lte":"2025-11-15T10:12:49.746Z"},"availableDates.startDate":{"$gte":"2025-11-14T10:12:49.746Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get room data request","service":"organization-service"}
+{"level":"info","message":"Fetching room data for roomId: 6911f03b056bddacd64da165","service":"organization-service"}
+{"level":"info","message":"Fetched room: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"organization-service"}
+{"level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Received get all rooms count","service":"organization-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"6911e7620f65b4e6da72c14d","service":"organization-service"}
+{"level":"info","message":"Fetching rooms count","service":"organization-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('6911f03b056bddacd64da165'),\n  organizationId: '6911e7620f65b4e6da72c14d',\n  title: 'Dragon Sea hotel',\n  description: 'Dragon Sea Hotel is a 4-star hotel belonging to the international 4-star hotel system of Dragon Hotels. Located right in the center of Sam Son beach. Dragon Sea Hotel impresses you with its unique and modern architecture. The hotel is only a 2-minute walk from the beach, from the balcony of the room you can see the blue sea of ​​Sam Son. This place is 16km from Thanh Hoa City, 18km from the train station and 50km from Tho Xuan International Airport. You can go from the hotel to other famous scenic spots of Sam Son such as: Truong Le Mountain, Doc Cuoc Temple, Co Tien Temple, To Hien Thanh Temple, Trong Mai Islet, ... places with cultural, historical and tourist values ​​of Thanh land.',\n  availableDates: {\n    startDate: 2025-01-01T13:59:29.473Z,\n    endDate: 2025-12-31T13:59:29.473Z\n  },\n  prices: {\n    price: 1000000,\n    cleaningFee: 1000000,\n    roomService: 200000,\n    currency: 'inr'\n  },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotline:  0899 000 789  \\nTel: 0237 3822 678',\n  rating: { rating: 5, outOf: 5 },\n  capacity: 20,\n  bookingStatus: 'AVAILABLE',\n  amenities: [],\n  mainImage: 'https://i.ibb.co/23Jd24dH/dragon-sea-hotel-sam-son-3.jpg',\n  images: [],\n  features: [],\n  city: 'Thanh Hóa',\n  address: 'Address: 43 Ho Xuan Huong St., Truong Son, Sam Son, Thanh Hoa',\n  checkInTypes: [\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT',\n    'PAY_AT_HOTEL',\n    'PAY_AT_HOTEL',\n    'ONLINE_PAYMENT'\n  ],\n  createdAt: 2025-11-10T14:01:31.692Z,\n  updatedAt: 2025-11-14T09:14:42.120Z,\n  cost: 2200000,\n  __v: 0\n}","service":"organization-service"}
+{"level":"info","message":"Fetched rooms count: 1","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Received get all room request","service":"organization-service"}
+{"level":"info","message":"The query is: ","service":"organization-service"}
+{"level":"info","message":"Getting all rooms the for query: ","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:55316","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"room-service is running at http://localhost:57742","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:49173","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:9085","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:9185","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:54838","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:9086","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:9186","service":"room-service"}

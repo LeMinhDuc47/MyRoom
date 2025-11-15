@@ -1,11 +1,12 @@
-import eurekaClient from "../config/eurekaClientConfig";
+import { getEurekaClient } from "../config/eurekaClientHolder";
 import logger from "../config/logger";
 import ApiConstants from "../constants/ApiConstants";
 
 export function getInstanceURI(serviceName: string): string | null {
   logger.info(`fetching ${serviceName} URI from discovery server`);
 
-  const instances: [any] = eurekaClient.getInstancesByAppId(serviceName);
+  const client = getEurekaClient();
+  const instances: [any] = client?.getInstancesByAppId(serviceName);
   let URI: string | null = null;
 
   if (instances && instances.length > 0) {

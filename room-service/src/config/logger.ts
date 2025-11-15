@@ -4,7 +4,7 @@ const logger = winston.createLogger({
   level: "info",
   format: winston.format.json(),
   defaultMeta: {
-    service: "organization-service",
+    service: "room-service",
   },
   transports: [
     /**

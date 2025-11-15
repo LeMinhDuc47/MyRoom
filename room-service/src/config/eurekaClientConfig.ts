@@ -1,28 +1,44 @@
 import AppConstants from "../constants/AppConstants";
 
-const Eureka = require("eureka-js-client").Eureka;
+const { Eureka } = require("eureka-js-client");
 
-const eurekaClient = new Eureka({
-  instance: {
-    app: AppConstants.ROOM_SERVICE,
-    hostName: "localhost",
-    ipAddr: "127.0.0.1",
-    status: "UP",
-    port: {
-      $: 8086,
-      "@enabled": true,
-    },
-    vipAddress: AppConstants.ROOM_SERVICE,
-    dataCenterInfo: {
-      "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
-      name: "MyOwn",
-    },
-  },
-  eureka: {
-    host: "localhost",
-    port: 8761,
-    servicePath: "/eureka/apps",
-  },
-});
+type EurekaOptions = {
+  appName?: string;
+  port: number;
+  instanceId?: string;
+};
 
-export default eurekaClient;
+export function createEurekaClient(options: EurekaOptions) {
+  const appName = options.appName || AppConstants.ROOM_SERVICE;
+  const port = options.port;
+  const instanceId =
+    options.instanceId || `${appName}-${process.pid}-${port}`;
+
+  const eurekaHost = process.env.EUREKA_HOST || "localhost";
+  const eurekaPort = Number(process.env.EUREKA_PORT || 8761);
+  const hostName = process.env.EUREKA_HOSTNAME || "localhost";
+  const ipAddr = process.env.EUREKA_IP || "127.0.0.1";
+
+  return new Eureka({
+    instance: {
+      app: appName,
+      instanceId,
+      hostName,
+      ipAddr,
+      status: "UP",
+      vipAddress: appName,
+      preferIpAddress: true,
+      port: { $: port, "@enabled": true },
+      dataCenterInfo: {
+        "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+        name: "MyOwn",
+      },
+    },
+    eureka: {
+      host: eurekaHost,
+      port: eurekaPort,
+      servicePath: "/eureka/apps",
+    },
+  });
+}
+

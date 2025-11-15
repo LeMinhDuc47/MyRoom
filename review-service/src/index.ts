@@ -3,16 +3,18 @@ import { AddressInfo } from "net";
 import "dotenv/config";
 import logger from "./config/logger";
 import routes from "./routes/routes";
-import eurekaClient from "./config/eurekaClientConfig";
+import { createEurekaClient } from "./config/eurekaClientConfig";
 import connect from "./config/mongoDBConnect";
 const cors = require("cors");
+import AppConstants from "./constants/AppConstants";
+import { setEurekaClient } from "./config/eurekaClientHolder";
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT;
+const PORT = Number(process.env.PORT || 8088);
 
 const server = app.listen(PORT, async () => {
   const serverAddress = server.address() as AddressInfo;
@@ -23,12 +25,20 @@ const server = app.listen(PORT, async () => {
   // connect to mongoDB
   await connect();
 
-  // register the service to eureka server
+  // register the service to eureka server using actual bound port
+  const eurekaClient = createEurekaClient({
+    appName: AppConstants.REVIEW_SERVICE,
+    port: serverPort,
+    instanceId: process.env.INSTANCE_ID,
+  });
+
   eurekaClient.start((error: any) => {
     if (error) {
       logger.error(`Error occured during starting the eureka client: ${error}`);
     }
   });
+
+  setEurekaClient(eurekaClient);
 
   logger.info(`review-service is running at http://localhost:${serverPort}`);
 });

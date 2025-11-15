@@ -8,3 +8,21 @@
 {"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
 {"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
 {"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:9089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}
