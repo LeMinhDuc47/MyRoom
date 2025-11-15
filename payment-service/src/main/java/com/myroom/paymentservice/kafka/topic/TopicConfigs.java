@@ -16,18 +16,41 @@ public class TopicConfigs {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-
     @Bean
-    public KafkaAdmin kafkaAdmin(){
+    public KafkaAdmin kafkaAdmin() {
         Map<String, Object> configs = new HashMap<>();
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         return new KafkaAdmin(configs);
     }
 
     @Bean
-    public NewTopic bookingPaymentCompleted(){
+    public NewTopic bookingPaymentCompleted() {
         return TopicBuilder.name("booking.payment")
                 .partitions(2)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic bookingPaymentDlt() {
+        return TopicBuilder.name("booking.payment-dlt")
+                .partitions(1)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic bookingMail() {
+        return TopicBuilder.name("booking.mail")
+                .partitions(2)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic bookingMailDlt() {
+        return TopicBuilder.name("booking.mail.DLT")
+                .partitions(1)
                 .replicas(1)
                 .build();
     }

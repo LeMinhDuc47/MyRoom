@@ -6,6 +6,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.annotation.RetryableTopic;
+import org.springframework.retry.annotation.Backoff;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,19 +16,22 @@ public class BookingPaymentEventListener {
     @Autowired
     BookingService bookingService;
 
-
+    @RetryableTopic(attempts = "4", backoff = @Backoff(delay = 2000, multiplier = 2.0), autoCreateTopics = "true", dltTopicSuffix = "-dlt", exclude = {
+            JSONException.class })
     @KafkaListener(topics = "booking.payment")
-    public void listen(final String payload){
+    public void listen(final String payload) {
         log.info("Received booking payment event (kafka topic: 'booking.payment') with payload:{}", payload);
-        try{
+        try {
             JSONObject jsonPayload = new JSONObject(payload);
             String bookingId = jsonPayload.getString("bookingId");
             String status = jsonPayload.getString("status");
             bookingService.updateBookingStatusAndBookingPaymentMetaDataModel(bookingId, status);
-        } catch (JSONException jsonException){
+        } catch (JSONException jsonException) {
             log.error("Invalid message received: {}", jsonException.getMessage());
-        } catch (Exception ex){
+            throw jsonException;
+        } catch (Exception ex) {
             log.error("Some error occurred: {}", ex.getMessage());
+            throw ex;
         }
     }
 }
