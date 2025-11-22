@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
+import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 
 @ControllerAdvice
 @Slf4j
@@ -18,6 +19,16 @@ public class BookingServiceExceptionHandler {
         return new ResponseEntity<>(new BookingServiceWebException(exception.getErrorCode(), exception.getMessage(),
                 exception.getDetails()), HttpStatus.BAD_REQUEST);
     }
+
+        @ExceptionHandler({ PaymentServiceUnavailableException.class, CallNotPermittedException.class })
+        public ResponseEntity<BookingServiceWebException> handlePaymentServiceUnavailable(Exception exception, WebRequest request) {
+                log.error("Service Unavailable", exception);
+                return new ResponseEntity<>(new BookingServiceWebException(
+                                ApiConstants.PAYMENT_SERVICE_UNAVAILABLE,
+                                ApiConstants.MESSAGE_SERVICE_UNAVAILABLE,
+                                exception.getMessage()
+                ), HttpStatus.SERVICE_UNAVAILABLE);
+        }
 
     @ExceptionHandler({ InvalidBookingRequestDataException.class })
     public ResponseEntity<BookingServiceWebException> handleInvalidBookingRequestDataException(

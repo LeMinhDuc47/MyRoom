@@ -24,6 +24,7 @@ public class ApiConstants {
     public final static String INVALID_PAYMENT_METHOD_TYPE = "INVALID_PAYMENT_METHOD_TYPE";
     public final static String INVALID_BOOKING_REQUEST_ID = "INVALID_BOOKING_REQUEST_ID";
     public final static String ROOM_UNAVAILABLE = "ROOM_UNAVAILABLE";
+    public final static String PAYMENT_SERVICE_UNAVAILABLE = "PAYMENT_SERVICE_UNAVAILABLE";
 
 
     public final static String MESSAGE_SUCCESS = "Success";
