@@ -40,6 +40,9 @@ dependencies {
 	implementation "com.stripe:stripe-java:24.0.0"
 	implementation 'io.github.resilience4j:resilience4j-spring-boot3'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    implementation 'io.zipkin.reporter2:zipkin-reporter-brave
 
 	compileOnly 'org.projectlombok:lombok'
 
