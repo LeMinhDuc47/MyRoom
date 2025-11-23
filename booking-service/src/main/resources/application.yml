@@ -77,7 +77,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-      management:
+management:
   tracing:
     sampling:
       probability: 1.0

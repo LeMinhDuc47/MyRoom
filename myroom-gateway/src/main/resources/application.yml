@@ -166,7 +166,7 @@ resilience4j:
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
 
-      management:
+management:
   tracing:
     sampling:
       probability: 1.0
