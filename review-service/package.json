@@ -17,6 +17,10 @@
     "lodash": "^4.17.21",
     "mongoose": "^8.1.0",
     "winston": "^3.11.0",
+    "zipkin": "^0.22.0",
+    "zipkin-context-cls": "^0.22.0",
+    "zipkin-instrumentation-express": "^0.22.0",
+    "zipkin-transport-http": "^0.22.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

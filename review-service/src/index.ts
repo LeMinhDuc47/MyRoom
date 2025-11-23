@@ -8,7 +8,9 @@ import connect from "./config/mongoDBConnect";
 const cors = require("cors");
 import AppConstants from "./constants/AppConstants";
 import { setEurekaClient } from "./config/eurekaClientHolder";
-
+const CLSContext = require('zipkin-context-cls');
+import { Tracer, BatchRecorder, jsonEncoder } from 'zipkin';
+import { HttpLogger } from 'zipkin-transport-http';
 const app = express();
 
 app.use(express.json());
@@ -37,6 +39,22 @@ const server = app.listen(PORT, async () => {
       logger.error(`Error occured during starting the eureka client: ${error}`);
     }
   });
+const {Tracer, BatchRecorder, jsonEncoder: {JSON_V2}} = require('zipkin');
+const {HttpLogger} = require('zipkin-transport-http');
+const zipkinMiddleware = require('zipkin-instrumentation-express').expressMiddleware;
+
+const tracer = new Tracer({
+  ctxImpl: new CLSContext('zipkin'),
+  recorder: new BatchRecorder({
+    logger: new HttpLogger({
+      endpoint: 'http://localhost:9411/api/v2/spans',
+      jsonEncoder: JSON_V2
+    })
+  }),
+  localServiceName: 'mail-service' 
+});
+
+app.use(zipkinMiddleware({tracer}));
 
   setEurekaClient(eurekaClient);
 
