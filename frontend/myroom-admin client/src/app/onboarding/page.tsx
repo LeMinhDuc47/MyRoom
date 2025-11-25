@@ -39,18 +39,18 @@ export default function Onboarding() {
     });
 
   useEffect(() => {
-    setLoading(true);
-    if (user && !isOrganizationDataLoading) {
-      if (user) {
-        setEmail(user.email!);
-      }
-
-      if (organization) {
-        router.push("/dashboard");
-      }
-      setLoading(false);
+    if (!user || isOrganizationDataLoading) {
+      return;
     }
-  }, [user, isOrganizationDataLoading, organization]);
+
+    if (user.email) {
+      setEmail(user.email);
+    }
+
+    if (organization) {
+      router.push("/dashboard");
+    }
+  }, [user, organization, isOrganizationDataLoading, router]);
 
   const formItemLayout = {
     labelCol: {
@@ -125,48 +125,49 @@ export default function Onboarding() {
     });
   };
 
-  return (
-    user && (
+  if (!user || isOrganizationDataLoading || organization) {
+    return (
       <div className="onboardingDivMain">
-        <div className="content">
-          <div className="header">
-            <h2>Organization Onboarding</h2>
-          </div>
-          <Form
-            {...formItemLayout}
-            style={{ maxWidth: 600 }}
-            onFinish={onboardOrganization}
-          >
-            <Name name={name} setName={setName} />
-
-            <Email email={user.email!} />
-
-            <PhoneNumber
-              phoneNumber={phoneNumber}
-              setPhoneNumber={setPhoneNumber}
-            />
-
-            <Description
-              description={description}
-              setDescription={setDescription}
-            />
-
-            <BusinessProfile
-              businessProfile={businessProfile}
-              setBusinessProfile={setBusinessProfile}
-            />
-
-            <Form.Item wrapperCol={{ offset: 6, span: 16 }}>
-              <Button type="primary" htmlType="submit" loading={loading}>
-                Submit
-              </Button>
-            </Form.Item>
-          </Form>
-        </div>
-        <Spin size="large" className="loadingIcon" spinning={loading} />
+        <Spin size="large" className="loadingIcon" />
         {contextHolder}
       </div>
-    )
+    );
+  }
+
+  return (
+    <div className="onboardingDivMain">
+      <div className="content">
+        <div className="header">
+          <h2>Organization Onboarding</h2>
+        </div>
+        <Form
+          {...formItemLayout}
+          style={{ maxWidth: 600 }}
+          onFinish={onboardOrganization}
+        >
+          <Name name={name} setName={setName} />
+
+          <Email email={email} />
+
+          <PhoneNumber phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} />
+
+          <Description description={description} setDescription={setDescription} />
+
+          <BusinessProfile
+            businessProfile={businessProfile}
+            setBusinessProfile={setBusinessProfile}
+          />
+
+          <Form.Item wrapperCol={{ offset: 6, span: 16 }}>
+            <Button type="primary" htmlType="submit" loading={loading}>
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
+      <Spin size="large" className="loadingIcon" spinning={loading} />
+      {contextHolder}
+    </div>
   );
 }
 

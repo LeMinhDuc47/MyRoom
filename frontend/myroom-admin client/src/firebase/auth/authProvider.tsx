@@ -30,7 +30,7 @@ const UserAuthContext: React.Context<AuthContextProps> =
     googleSignIn: () => {},
     logOut: () => {},
     organization: null,
-    isOrganizationDataLoading: false,
+    isOrganizationDataLoading: true,
   });
 
 export const UserAuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
@@ -38,7 +38,7 @@ export const UserAuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [organization, setOrganization] =
     React.useState<organizations.IOrganization | null>(null);
   const [isOrganizationDataLoading, setIsOrganizationDataLoading] =
-    React.useState<boolean>(false);
+    React.useState<boolean>(true);
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
@@ -49,26 +49,32 @@ export const UserAuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     signOut(auth);
   };
 
-  const getOrganization = (uid: string) => {
+  const getOrganization = async (uid: string) => {
     setIsOrganizationDataLoading(true);
-    organizationService
-      .getOrganizationBySuperAdminId(uid)
-      .then((data) => {
-        setOrganization(data.data);
-        setIsOrganizationDataLoading(false);
-      })
-      .catch((error) => {
-        setIsOrganizationDataLoading(false);
-      });
+    try {
+      const data = await organizationService.getOrganizationBySuperAdminId(
+        uid
+      );
+      setOrganization(data.data);
+    } catch (error) {
+      setOrganization(null);
+    } finally {
+      setIsOrganizationDataLoading(false);
+    }
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        getOrganization(user.uid);
-        setCookie("userData", user.toJSON());
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        setCookie("userData", currentUser.toJSON());
+        getOrganization(currentUser.uid);
+        return;
       }
+
+      setUser(null);
+      setOrganization(null);
+      setIsOrganizationDataLoading(false);
     });
     return () => unsubscribe();
   }, []);
