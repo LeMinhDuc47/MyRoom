@@ -54,7 +54,7 @@ const tracer = new Tracer({
       jsonEncoder: JSON_V2
     })
   }),
-  localServiceName: 'mail-service' 
+  localServiceName: 'room-service' 
 });
 
 app.use(zipkinMiddleware({tracer}));
