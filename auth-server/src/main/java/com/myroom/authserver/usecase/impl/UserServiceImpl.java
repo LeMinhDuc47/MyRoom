@@ -11,6 +11,7 @@ import com.myroom.authserver.data.model.FirebaseUserModel;
 import com.myroom.authserver.exception.AuthServiceFirebaseInvalidTokenException;
 import com.myroom.authserver.usecase.UserService;
 import com.myroom.authserver.usecase.impl.firebase.FirebaseAuthService;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Cacheable(value = "users", key = "#uid")
     public Optional<UserResponseModel> getUserByUID(String uid){
         Optional<UserResponseModel> userResponse = Optional.empty();
         try {
