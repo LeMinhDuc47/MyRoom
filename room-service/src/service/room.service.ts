@@ -8,6 +8,7 @@ import {
   updateRoomSchemaForBookingTypeInput,
 } from "../schema";
 import RoomModel from "../model/room.model";
+import redisClient from "../config/redis";
 import ApiConstants from "../constants/ApiConstants";
 import logger from "../config/logger";
 import { IGetRooms, IRoomAvailability } from "./types";
@@ -65,7 +66,7 @@ export async function updateRoom(input: updateRoomInput): Promise<Room | null> {
   if (valid === GenericValidInvalidEnum.VALID) {
     let { uid, ...userGivenData } = input;
 
-    return await RoomModel.findByIdAndUpdate(
+    const updated = await RoomModel.findByIdAndUpdate(
       input.id,
       {
         $set: {
@@ -75,6 +76,19 @@ export async function updateRoom(input: updateRoomInput): Promise<Room | null> {
       },
       { new: true }
     );
+
+    // Invalidate cache for this room
+    try {
+      const cacheKey = `room:${input.id}`;
+      await redisClient.del(cacheKey);
+      logger.info(`Cache invalidated for key ${cacheKey}`);
+    } catch (err) {
+      logger.error(
+        `Redis delete error for key room:${input.id}: ${err instanceof Error ? err.message : String(err)}`
+      );
+    }
+
+    return updated;
   } else {
     throw {
       name: "AppError",
@@ -120,7 +134,34 @@ export async function updateRoomForBooking(
 }
 
 export async function getRoom(id: string): Promise<Room | null> {
-  return await RoomModel.findById(id);
+  const cacheKey = `room:${id}`;
+
+  try {
+    const cached = await redisClient.get(cacheKey);
+    if (cached) {
+      logger.info(`Cache hit for key ${cacheKey}`);
+      return JSON.parse(cached) as Room;
+    }
+  } catch (err) {
+    logger.error(
+      `Redis read error for key ${cacheKey}: ${err instanceof Error ? err.message : String(err)}`
+    );
+  }
+
+  const doc: any = await RoomModel.findById(id);
+  if (!doc) return null;
+
+  const room: Room = typeof doc.toObject === "function" ? (doc.toObject() as Room) : (doc as Room);
+
+  try {
+    await redisClient.set(cacheKey, JSON.stringify(room), { EX: 3600 });
+  } catch (err) {
+    logger.error(
+      `Redis write error for key ${cacheKey}: ${err instanceof Error ? err.message : String(err)}`
+    );
+  }
+
+  return room;
 }
 
 export async function deleteRoom(input: deleteRoomInput) {
@@ -130,7 +171,19 @@ export async function deleteRoom(input: deleteRoomInput) {
   const valid: GenericValidInvalidEnum = await validateDeleteRoomData(input);
 
   if (valid === GenericValidInvalidEnum.VALID) {
-    return await RoomModel.findByIdAndDelete(input.id);
+    const result = await RoomModel.findByIdAndDelete(input.id);
+
+    try {
+      const cacheKey = `room:${input.id}`;
+      await redisClient.del(cacheKey);
+      logger.info(`Cache invalidated for key ${cacheKey}`);
+    } catch (err) {
+      logger.error(
+        `Redis delete error for key room:${input.id}: ${err instanceof Error ? err.message : String(err)}`
+      );
+    }
+
+    return result;
   } else {
     throw {
       name: "AppError",
