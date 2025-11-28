@@ -1,5 +1,5 @@
 import winston from "winston";
-
+import path from "path";
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.json(),
@@ -12,11 +12,11 @@ const logger = winston.createLogger({
      * Write all logs with importance level of `info` or less to `combined.log`
      */
     new winston.transports.File({
-      filename: "error.log",
+      filename: path.join("logs", "error.log"),
       level: "error",
     }),
     new winston.transports.File({
-      filename: "combined.log",
+      filename: path.join("logs", "combined.log"),
     }),
   ],
 });
