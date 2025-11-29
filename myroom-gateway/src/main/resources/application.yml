@@ -64,8 +64,8 @@ spring:
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter:
-                  replenishRate: 1       # ~5/min approximation with low burst
-                  burstCapacity: 5
+                  replenishRate: 20       # ~5/min approximation with low burst
+                  burstCapacity: 40
                   requestedTokens: 1
                 key-resolver: '#{@userKeyResolver}'
 
@@ -124,8 +124,8 @@ spring:
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter:
-                  replenishRate: 1       # ~5/min approximation
-                  burstCapacity: 5
+                  replenishRate: 20       # ~5/min approximation
+                  burstCapacity: 40
                   requestedTokens: 1
                 key-resolver: '#{@userKeyResolver}'
 
@@ -165,7 +165,12 @@ resilience4j:
         waitDurationInOpenState: 10s
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
-
+  timelimiter:
+    instances:
+      bookingServiceCircuitBreaker:
+        timeoutDuration: 30s
+      paymentServiceCircuitBreaker:
+        timeoutDuration: 30s
 management:
   tracing:
     sampling:

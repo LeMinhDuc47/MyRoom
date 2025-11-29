@@ -1,0 +1,3 @@
+{"level":"info","message":"Trying to connect MongoDB...","service":"review-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"review-service"}
+{"level":"info","message":"review-service is running at http://localhost:8088","service":"review-service"}

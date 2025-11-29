@@ -126,19 +126,24 @@ public class StripeServiceImpl implements StripeService {
     private SessionCreateParams.PaymentIntentData createPaymentIntentData(
             StripeCreateSessionObjectDto stripeCreateSessionObjectDto) {
         log.info("Creating Stripe PaymentIntentData object");
-        String roomOrganizationStripeAccountId = organizationPayService.getOrganizationStripeAccountId(
-                stripeCreateSessionObjectDto.getOrganizationId(), stripeCreateSessionObjectDto.getUid());
-        Long myRoomOrganizationApplicationFeeAmount = paymentService
-                .getApplicationFeeAmount(stripeCreateSessionObjectDto.getAmount());
+        // String roomOrganizationStripeAccountId = organizationPayService.getOrganizationStripeAccountId(
+        //         stripeCreateSessionObjectDto.getOrganizationId(), stripeCreateSessionObjectDto.getUid());
+        // Long myRoomOrganizationApplicationFeeAmount = paymentService
+        //         .getApplicationFeeAmount(stripeCreateSessionObjectDto.getAmount());
+        // SessionCreateParams.PaymentIntentData data = SessionCreateParams.PaymentIntentData.builder()
+        //         .setApplicationFeeAmount(myRoomOrganizationApplicationFeeAmount)
+        //         .setTransferData(
+        //                 SessionCreateParams.PaymentIntentData.TransferData.builder()
+        //                         .setDestination(roomOrganizationStripeAccountId)
+        //                         .build())
+        //         .build();
         SessionCreateParams.PaymentIntentData data = SessionCreateParams.PaymentIntentData.builder()
-                .setApplicationFeeAmount(myRoomOrganizationApplicationFeeAmount)
-                .setTransferData(
-                        SessionCreateParams.PaymentIntentData.TransferData.builder()
-                                .setDestination(roomOrganizationStripeAccountId)
-                                .build())
-                .build();
-        log.info("PaymentIntentData Object created successfully: {}", data);
-        return data;
+            .build();
+
+    log.info("PaymentIntentData Object created successfully (SIMPLE MODE): {}", data);
+    return data;
+        // log.info("PaymentIntentData Object created successfully: {}", data);
+        // return data;
     }
 
     private StripeObject getStripeObject(Event event) {

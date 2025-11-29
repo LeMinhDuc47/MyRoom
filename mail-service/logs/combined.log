@@ -1,0 +1,3 @@
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Server is ready to take our messages!","service":"mail-service"}

@@ -1,3 +1,0 @@
-{"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"review-service"}
-{"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"review-service"}
-{"level":"error","message":"Some error occured while connecting MongoDB MongoNetworkError: connect ETIMEDOUT 159.143.160.150:27017","service":"review-service"}
