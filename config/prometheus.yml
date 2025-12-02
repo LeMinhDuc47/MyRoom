@@ -2,30 +2,24 @@ global:
   scrape_interval: 10s
 
 scrape_configs:
-  # ======================================================
-  # NHÓM 1: JAVA SPRING BOOT 
-  # ======================================================
   - job_name: 'spring_microservices'
     metrics_path: '/actuator/prometheus'
     static_configs:
       - targets: 
-        - 'discovery-server:8761'   
-        - 'admin-server:9090'       
-        - 'myroom-gateway:8080'     
-        - 'auth-server:8081'        
-        - 'booking-service:8082'
-        - 'onboarding-service:8083' 
-        - 'payment-service:8084'
-        - 'organization-pay:8087'   
+        - 'host.docker.internal:8761'  
+        - 'host.docker.internal:9091'  
+        - 'host.docker.internal:8080'  
+        - 'host.docker.internal:8081'  
+        - 'host.docker.internal:8082'  
+        - 'host.docker.internal:8083'  
+        - 'host.docker.internal:8084'  
+        - 'host.docker.internal:8087'  
 
-  # ======================================================
-  # NHÓM 2: NODE.JS / EXPRESS 
-  # ======================================================
   - job_name: 'nodejs_microservices'
     metrics_path: '/metrics'
     static_configs:
       - targets: 
-        - 'organization-service:8085'
-        - 'room-service:8086'
-        - 'review-service:8089'    
-        - 'mail-service:8088'     
+        - 'host.docker.internal:8085'  
+        - 'host.docker.internal:8086'  
+        - 'host.docker.internal:8089'  
+        - 'host.docker.internal:8088'  
