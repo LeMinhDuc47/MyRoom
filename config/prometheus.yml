@@ -28,4 +28,4 @@ scrape_configs:
         - 'organization-service:8085'
         - 'room-service:8086'
         - 'review-service:8089'    
-        - 'mail-service:????'     
+        - 'mail-service:8088'     

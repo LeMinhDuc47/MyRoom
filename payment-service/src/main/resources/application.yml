@@ -89,3 +89,6 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+  observations:
+    key-values:
+      application: ${spring.application.name}
