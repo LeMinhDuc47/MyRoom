@@ -1,0 +1,167 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # 1. DATABASES
+  # ==========================================
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myroom
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - myroom-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - myroom-network
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - myroom-network
+
+  # ==========================================
+  # 2. MESSAGE BROKER
+  # ==========================================
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.3.2
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    networks:
+      - myroom-network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.3.2
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+    networks:
+      - myroom-network
+
+  # ==========================================
+  # 3. OBSERVABILITY
+  # ==========================================
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - myroom-network
+
+  # --- ELK STACK (Logs) ---
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.10
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" # Giới hạn RAM
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    networks:
+      - myroom-network
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.17.10
+    container_name: logstash
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./config/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./booking-service/logs:/usr/share/logstash/pipeline/logs/booking
+      - ./auth-server/logs:/usr/share/logstash/pipeline/logs/auth
+      - ./payment-service/logs:/usr/share/logstash/pipeline/logs/payment
+      - ./myroom-gateway/logs:/usr/share/logstash/pipeline/logs/gateway
+      - ./onboarding-service/logs:/usr/share/logstash/pipeline/logs/onboarding
+      - ./organization-pay/logs:/usr/share/logstash/pipeline/logs/organization-pay
+      - ./organization-service/logs:/usr/share/logstash/pipeline/logs/organization
+      - ./review-service/logs:/usr/share/logstash/pipeline/logs/review
+      - ./room-service/logs:/usr/share/logstash/pipeline/logs/room
+      - ./mail-service/logs:/usr/share/logstash/pipeline/logs/mail
+    depends_on:
+      - elasticsearch
+    networks:
+      - myroom-network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.10
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=34388bc18c19a5fa160e55b73d2701d4
+      - XPACK_REPORTING_ENCRYPTIONKEY=aa60757986ee29f699e694b52168f372
+      - XPACK_SECURITY_ENCRYPTIONKEY=afeb852cd90d9aa2858869ebbc52595f
+    networks:
+      - myroom-network
+
+  # --- PROMETHEUS & GRAFANA (Metrics) ---
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - myroom-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - myroom-network
+
+networks:
+  myroom-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  mongo_data:
