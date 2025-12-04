@@ -38,6 +38,7 @@ security:
   allowed-origins:
     - https://${DOMAIN}
     - http://localhost:3000
+    - http://localhost:3001
   allowed-methods:
     - GET
     - POST
