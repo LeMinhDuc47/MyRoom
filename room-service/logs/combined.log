@@ -1576,3 +1576,817 @@
 {"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
 {"level":"info","message":"Fetching rooms count","service":"room-service"}
 {"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"room-service"}
+{"level":"info","message":"room-service is running at http://localhost:8086","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:33:26.501Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:33:26.501Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:33:26.501Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:33:26.501Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:34:02.172Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:34:02.172Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:34:02.172Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:34:02.172Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:35:27.090Z","checkOut":"2025-12-05T16:35:27.090Z","guests":1,"id":"692ab9b8714ca038e208446b","level":"info","message":"Checking room availability for roomId: 692ab9b8714ca038e208446b and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:33:47.032Z","checkOut":"2025-12-05T16:33:47.032Z","guests":1,"id":"692ab9b8714ca038e208446b","level":"info","message":"Checking room availability for roomId: 692ab9b8714ca038e208446b and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:35:27.090Z","checkOut":"2025-12-05T16:35:27.090Z","guests":1,"id":"692ab9b8714ca038e208446b","level":"info","message":"Checking room availability for roomId: 692ab9b8714ca038e208446b and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:33:47.032Z","checkOut":"2025-12-05T16:33:47.032Z","guests":1,"id":"692ab9b8714ca038e208446b","level":"info","message":"Checking room availability for roomId: 692ab9b8714ca038e208446b and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:33:47.032Z","checkOut":"2025-12-05T16:33:47.032Z","guests":1,"id":"692ab9b8714ca038e208446b","level":"info","message":"Checking room availability for roomId: 692ab9b8714ca038e208446b and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get top-performers rooms request","service":"room-service"}
+{"level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching top-performers rooms","service":"room-service"}
+{"level":"info","message":"Fetched top-performers rooms: {\n  _id: new ObjectId('692ab9b8714ca038e208446b'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'Aaron Boutique Hotel',\n  description: 'Aaron Boutique Hotel có hồ bơi ngoài trời, khu vườn, phòng chờ chung và sân hiên ở Nha Trang. Mỗi phòng tại khách sạn 4 sao này đều nhìn ra thành phố, đồng thời khách có thể sử dụng nhà hàng và quầy bar. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.\\n',\n  availableDates: {\n    startDate: 2025-11-01T09:10:57.482Z,\n    endDate: 2026-01-01T09:10:57.482Z\n  },\n  prices: { price: 1200, cleaningFee: 50, roomService: 100, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    'WiFi miễn phí',\n    'Hồ bơi ngoài trời',\n    'Xe đưa đón sân bay',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Nhà hàng',\n    'Quầy bar',\n    'Bữa sáng rất tốt'\n  ],\n  mainImage: 'https://i.ibb.co/0pRWx3dX/Aaron-Boutique-Hotel.jpg',\n  images: [],\n  features: [ 'vị trí trung tâm thuận tiện', ' nhân viên vui vẻ thân thiện ' ],\n  city: 'Nha Trang',\n  address: '16 Biet Thu Street, Loc Tho Ward, Nha Trang, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:15:36.535Z,\n  updatedAt: 2025-11-29T09:41:06.692Z,\n  cost: 1350,\n  __v: 0\n},{\n  _id: new ObjectId('692abb9c714ca038e208447e'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'M Hotel Danang',\n  description: 'Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê chỉ vài bước chân, M Hotel Danang cung cấp chỗ nghỉ có hồ bơi ngoài trời, chỗ đậu xe riêng miễn phí, trung tâm thể dục và khu vườn. Ngoài nhà hàng, chỗ nghỉ còn có phòng chờ chung, phòng xông hơi khô và bể sục. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí ở toàn bộ chỗ nghỉ.',\n  availableDates: {\n    startDate: 2025-11-01T09:21:09.787Z,\n    endDate: 2026-01-01T09:21:09.787Z\n  },\n  prices: { price: 1200, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Hotel rat tot sạch sẽ dịch vụ tốt nhận vien than thiên và nhiệt tình',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'WiFi miễn phí',\n    'Xe đưa đón sân bay',\n    'Phòng gia đình',\n    'Giáp biển',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Quầy bar',\n    'Bữa sáng tuyệt hảo'\n  ],\n  mainImage: 'https://i.ibb.co/Kcd1dd33/M-Hotel-Danang.jpg',\n  images: [],\n  features: [ 'Hotel sạch sẽ', 'Dịch vụ tốt', 'Nhân viên nhiệt tình' ],\n  city: 'Da Nang',\n  address: '286 Vo Nguyen Giap, Đà Nẵng, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:23:40.066Z,\n  updatedAt: 2025-11-29T09:23:40.066Z,\n  cost: 1500,\n  __v: 0\n},{\n  _id: new ObjectId('692abc84714ca038e208448d'),\n  organizationId: '692ab2e4e8f8d781960ebacf',\n  title: 'FLC Grand Hotel Samson',\n  description: 'FLC Grand Hotel Samson cung cấp chỗ nghỉ 5 sao bên bờ biển ở thành phố Sầm Sơn. Chỗ nghỉ này có hồ bơi ngoài trời, hồ bơi trong nhà, 2 nhà hàng trong khuôn viên và phòng tập thể dục.\\n' +\n    '\\n' +\n    'Tất cả phòng nghỉ tại đây đều được trang bị TV truyền hình vệ tinh màn hình phẳng, ấm đun nước, bồn tắm, đồ vệ sinh cá nhân miễn phí và bàn làm việc. Ngoài ra, phòng còn đi kèm phòng tắm riêng và WiFi miễn phí. Một số phòng cho tầm nhìn ra biển. Máy điều hòa và tủ để quần áo cũng được cung cấp trong các phòng nghỉ của FLC Grand Hotel Samson.',\n  availableDates: {\n    startDate: 2025-11-01T09:24:53.293Z,\n    endDate: 2026-01-01T09:24:53.293Z\n  },\n  prices: { price: 900, cleaningFee: 100, roomService: 200, currency: 'inr' },\n  createdBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  updatedBy: '3edcBmQfHXg8WUGXCKdUizicAe43',\n  note: 'Khạnh sạn hoạt động đã lâu nhưng chất lượng vẫn giữ được rất tốt',\n  rating: { rating: null, outOf: 5 },\n  capacity: 50,\n  bookingStatus: 'AVAILABLE',\n  amenities: [\n    '2 hồ bơi',\n    'Trung tâm Spa & chăm sóc sức khoẻ',\n    'Trung tâm thể dục',\n    'Dịch vụ phòng',\n    'Nhà hàng',\n    'Chỗ đỗ xe miễn phí',\n    'Quầy bar',\n    'Khu vực bãi tắm riêng',\n    'Bữa sáng tốt'\n  ],\n  mainImage: 'https://i.ibb.co/dsfy25FX/FLC-Grand-Hotel-Samson.jpg',\n  images: [],\n  features: [ 'Được khách gần đây đánh giá cao' ],\n  city: 'Sầm Sơn',\n  address: 'Ho Xuan Huong Street, Sam Son, Thanh Hoa, Sầm Sơn, Việt Nam',\n  checkInTypes: [ 'ONLINE_PAYMENT', 'PAY_AT_HOTEL', 'PAY_AT_HOTEL' ],\n  createdAt: 2025-11-29T09:27:32.753Z,\n  updatedAt: 2025-11-29T09:27:32.753Z,\n  cost: 1200,\n  __v: 0\n}","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get all rooms count","service":"room-service"}
+{"bookingStatus":"AVAILABLE","level":"info","message":"The query is: ","organizationId":"692ab2e4e8f8d781960ebacf","service":"room-service"}
+{"level":"info","message":"Fetching rooms count","service":"room-service"}
+{"level":"info","message":"Fetched rooms count: 3","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:41:50.394Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:41:50.394Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:41:50.394Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:41:50.394Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:47:44.610Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:47:44.610Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:47:44.610Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:47:44.610Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:47:59.352Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:47:59.352Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:47:59.352Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:47:59.352Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:47:49.967Z","checkOut":"2025-12-05T16:47:49.967Z","guests":1,"id":"692abc84714ca038e208448d","level":"info","message":"Checking room availability for roomId: 692abc84714ca038e208448d and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:48:06.743Z","checkOut":"2025-12-05T16:48:06.743Z","guests":1,"id":"692abc84714ca038e208448d","level":"info","message":"Checking room availability for roomId: 692abc84714ca038e208448d and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:48:06.743Z","checkOut":"2025-12-05T16:48:06.743Z","guests":1,"id":"692abc84714ca038e208448d","level":"info","message":"Checking room availability for roomId: 692abc84714ca038e208448d and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:47:49.967Z","checkOut":"2025-12-05T16:47:49.967Z","guests":1,"id":"692abc84714ca038e208448d","level":"info","message":"Checking room availability for roomId: 692abc84714ca038e208448d and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:49:53.989Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:49:53.989Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:49:53.989Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:49:53.989Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abc84714ca038e208448d","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:50:08.299Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:50:08.299Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:50:08.299Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:50:08.299Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:50:20.491Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:50:20.491Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:50:20.491Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:50:20.491Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T16:50:29.335Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T16:50:29.335Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T16:50:29.335Z"},"availableDates.startDate":{"$gte":"2025-12-04T16:50:29.335Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:50:26.091Z","checkOut":"2025-12-05T16:50:26.091Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:50:42.991Z","checkOut":"2025-12-05T16:50:42.991Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:50:42.991Z","checkOut":"2025-12-05T16:50:42.991Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T16:50:26.091Z","checkOut":"2025-12-05T16:50:26.091Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T17:38:11.853Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T17:38:11.853Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T17:38:11.853Z"},"availableDates.startDate":{"$gte":"2025-12-04T17:38:11.853Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"adults":"1","availableDates":"{\"startDate\":{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"startDate\":\"2025-12-04T17:38:24.323Z\"},\"endDate\":{\"operator\":\"LESS_THAN_OR_EQUAL\",\"endDate\":\"2025-12-05T17:38:24.323Z\"}}","bookingStatus":"AVAILABLE","capacity":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"capacity\":1}","children":"0","level":"info","message":"The query is: ","service":"room-service"}
+{"availableDates.endDate":{"$lte":"2025-12-05T17:38:24.323Z"},"availableDates.startDate":{"$gte":"2025-12-04T17:38:24.323Z"},"bookingStatus":"AVAILABLE","capacity":{"$gte":1},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get all room request","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":"{\"operator\":\"GREATER_THAN_OR_EQUAL\",\"cost\":1000}","level":"info","message":"The query is: ","service":"room-service"}
+{"bookingStatus":"AVAILABLE","cost":{"$gte":1000},"level":"info","message":"Getting all rooms the for query: ","service":"room-service"}
+{"level":"info","message":"Fetched all rooms successfully!","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T17:38:29.704Z","checkOut":"2025-12-05T17:38:29.704Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T17:38:21.973Z","checkOut":"2025-12-05T17:38:21.973Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T17:38:21.973Z","checkOut":"2025-12-05T17:38:21.973Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received request for checking room availability","service":"room-service"}
+{"checkIn":"2025-12-04T17:38:29.704Z","checkOut":"2025-12-05T17:38:29.704Z","guests":1,"id":"692abb9c714ca038e208447e","level":"info","message":"Checking room availability for roomId: 692abb9c714ca038e208447e and with data:","service":"room-service"}
+{"available":true,"level":"info","message":"Room availability:  available","service":"room-service"}
+{"level":"info","message":"Received get room data request","service":"room-service"}
+{"level":"info","message":"Fetching room data for roomId: 692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Cache hit for key room:692abb9c714ca038e208447e","service":"room-service"}
+{"level":"info","message":"Fetched room: [object Object]","service":"room-service"}

@@ -91,7 +91,12 @@ public class BookingServiceImpl implements BookingService {
                 throw new BookingServiceRuntimeException(
                         "The room is currently being booked by another user. Please try again.");
             }
-
+// log.info(">>> [TEST] Đang giữ khóa và ngủ 10 giây để test Race Condition...");
+//             try {
+//                 Thread.sleep(10000); 
+//             } catch (InterruptedException e) {
+//                 e.printStackTrace();
+//             }
             BookingOrderResponseModel bookingOrderResponseModel = null;
 
             validateCurrentUser(bookingOrderRequestModel.getUid(), bookingRequestDetails.getUid());

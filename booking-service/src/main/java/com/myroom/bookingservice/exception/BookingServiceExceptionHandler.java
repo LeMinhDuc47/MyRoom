@@ -94,10 +94,22 @@ public class BookingServiceExceptionHandler {
                 exception.getDetails()), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler({ Exception.class, BookingServiceRuntimeException.class })
+    @ExceptionHandler({ Exception.class })
     public ResponseEntity<BookingServiceWebException> handleException(Exception exception, WebRequest request) {
         log.error("Error", exception);
         return new ResponseEntity<>(new BookingServiceWebException(ApiConstants.INTERNAL_SERVER_ERROR,
                 ApiConstants.MESSAGE_INTERNAL_SERVER_ERROR, ""), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(BookingServiceRuntimeException.class)
+    public ResponseEntity<BookingServiceWebException> handleBookingServiceRuntimeException(
+            BookingServiceRuntimeException exception, WebRequest request) {
+        log.warn("{}", exception.getMessage());
+        return new ResponseEntity<>(
+                new BookingServiceWebException(
+                        "BOOKING_CONFLICT",
+                        exception.getMessage(),
+                        "The selected room/dates are no longer available. Please try again."),
+                HttpStatus.CONFLICT);
     }
 }
