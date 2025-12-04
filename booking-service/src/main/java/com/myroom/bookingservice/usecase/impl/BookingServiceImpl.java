@@ -17,6 +17,8 @@ import com.myroom.bookingservice.repository.BookingRepository;
 import com.myroom.bookingservice.usecase.*;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -26,6 +28,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Slf4j
@@ -57,6 +60,9 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     KafkaMessageService kafkaMessageService;
 
+    @Autowired
+    RedissonClient redissonClient;
+
     @Override
     public BookingOrderResponseModel createBookingOrder(String bookingRequestId,
             BookingOrderRequestModel bookingOrderRequestModel) {
@@ -69,7 +75,23 @@ public class BookingServiceImpl implements BookingService {
         AppConstants.GenericValidInvalidEnum validation = bookingRequestValidationService
                 .validateBookingRequestData(bookingRequestModel);
 
-        if (validation.equals(AppConstants.GenericValidInvalidEnum.VALID)) {
+        if (!validation.equals(AppConstants.GenericValidInvalidEnum.VALID)) {
+            log.error("Invalid Booking Request: {}", bookingRequestDetails);
+            throw new InvalidBookingRequestDataException(ApiConstants.INVALID_BOOKING_REQUEST_DATA,
+                    "Booking cannot be processed due to an invalid booking request data", "");
+        }
+
+        String lockKey = "lock:room:" + bookingRequestDetails.getRoomId();
+        RLock lock = redissonClient.getLock(lockKey);
+        boolean locked = false;
+        try {
+            locked = lock.tryLock(5, 20, TimeUnit.SECONDS);
+            if (!locked) {
+                log.warn("Could not acquire lock for key: {}", lockKey);
+                throw new BookingServiceRuntimeException(
+                        "The room is currently being booked by another user. Please try again.");
+            }
+
             BookingOrderResponseModel bookingOrderResponseModel = null;
 
             validateCurrentUser(bookingOrderRequestModel.getUid(), bookingRequestDetails.getUid());
@@ -104,10 +126,17 @@ public class BookingServiceImpl implements BookingService {
             }
             log.info("Booking Order: {}", bookingOrderResponseModel);
             return bookingOrderResponseModel;
-        } else {
-            log.error("Invalid Booking Request: {}", bookingRequestDetails);
-            throw new InvalidBookingRequestDataException(ApiConstants.INVALID_BOOKING_REQUEST_DATA,
-                    "Booking cannot be processed due to an invalid booking request data", "");
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            throw new BookingServiceRuntimeException("Interrupted while acquiring booking lock");
+        } finally {
+            if (locked) {
+                try {
+                    lock.unlock();
+                } catch (Exception ex) {
+                    log.warn("Failed to unlock key {}: {}", lockKey, ex.getMessage());
+                }
+            }
         }
     }
 
