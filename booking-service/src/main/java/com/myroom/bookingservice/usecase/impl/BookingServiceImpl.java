@@ -25,6 +25,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import com.myroom.bookingservice.usecase.pipeline.BookingContext;
+import com.myroom.bookingservice.usecase.pipeline.BookingPipeline;
 
 import java.time.Instant;
 import java.util.*;
@@ -63,86 +65,20 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     RedissonClient redissonClient;
 
+    @Autowired
+    BookingPipeline bookingPipeline;
+
     @Override
     public BookingOrderResponseModel createBookingOrder(String bookingRequestId,
             BookingOrderRequestModel bookingOrderRequestModel) {
+        // Build context and hand off to pipeline
         bookingOrderRequestModel.setBookingRequestId(bookingRequestId);
-
-        BookingRequestDetails bookingRequestDetails = bookingRequestService.getBookingRequestData(bookingRequestId);
-
-        BookingRequestRequestModel bookingRequestModel = bookingRequestMapper
-                .toBookingRequestModel(bookingRequestDetails);
-        AppConstants.GenericValidInvalidEnum validation = bookingRequestValidationService
-                .validateBookingRequestData(bookingRequestModel);
-
-        if (!validation.equals(AppConstants.GenericValidInvalidEnum.VALID)) {
-            log.error("Invalid Booking Request: {}", bookingRequestDetails);
-            throw new InvalidBookingRequestDataException(ApiConstants.INVALID_BOOKING_REQUEST_DATA,
-                    "Booking cannot be processed due to an invalid booking request data", "");
-        }
-
-        String lockKey = "lock:room:" + bookingRequestDetails.getRoomId();
-        RLock lock = redissonClient.getLock(lockKey);
-        boolean locked = false;
-        try {
-            locked = lock.tryLock(5, 20, TimeUnit.SECONDS);
-            if (!locked) {
-                log.warn("Could not acquire lock for key: {}", lockKey);
-                throw new BookingServiceRuntimeException(
-                        "The room is currently being booked by another user. Please try again.");
-            }
-// log.info(">>> [TEST] Đang giữ khóa và ngủ 10 giây để test Race Condition...");
-//             try {
-//                 Thread.sleep(10000); 
-//             } catch (InterruptedException e) {
-//                 e.printStackTrace();
-//             }
-            BookingOrderResponseModel bookingOrderResponseModel = null;
-
-            validateCurrentUser(bookingOrderRequestModel.getUid(), bookingRequestDetails.getUid());
-
-            BookingDetails bookingDetails = createBookingRecord(bookingOrderRequestModel, bookingRequestDetails);
-
-            PaymentType type = bookingRequestDetails.getPaymentType();
-
-            switch (type) {
-                case PAY_AT_HOTEL: {
-                    updateStatus(bookingDetails, BookingStatus.PAY_AT_HOTEL);
-                    log.info("Redirecting to {} as the payment type is: {}", type, type);
-                    bookingOrderResponseModel = bookingMapper.toBookingOrderResponseModel(bookingDetails);
-                    bookingRequestService.updateStatus(bookingDetails.getBookingRequestId(),
-                            BookingRequestStatus.BOOKED);
-                    break;
-                }
-
-                case ONLINE_PAYMENT: {
-                    log.info("Redirecting to {} for payment as the payment type is: {}", type, type);
-                    OnlinePaymentOrderResponseDto onlinePaymentOrderResponseDto = doOnlinePayment(bookingDetails);
-                    bookingOrderResponseModel = bookingMapper.toBookingOrderResponseModel(onlinePaymentOrderResponseDto,
-                            bookingDetails);
-                    break;
-                }
-
-                default: {
-                    log.info("Booking cannot be processed due to an invalid payment type: {}", type);
-                    throw new InvalidPaymentTypeException(ApiConstants.INVALID_PAYMENT_TYPE, "Invalid payment type",
-                            "");
-                }
-            }
-            log.info("Booking Order: {}", bookingOrderResponseModel);
-            return bookingOrderResponseModel;
-        } catch (InterruptedException ie) {
-            Thread.currentThread().interrupt();
-            throw new BookingServiceRuntimeException("Interrupted while acquiring booking lock");
-        } finally {
-            if (locked) {
-                try {
-                    lock.unlock();
-                } catch (Exception ex) {
-                    log.warn("Failed to unlock key {}: {}", lockKey, ex.getMessage());
-                }
-            }
-        }
+        BookingContext context = new BookingContext();
+        context.setBookingRequestId(bookingRequestId);
+        context.setBookingOrderRequestModel(bookingOrderRequestModel);
+        BookingOrderResponseModel response = bookingPipeline.execute(context);
+        log.info("Booking Order: {}", response);
+        return response;
     }
 
     @Override

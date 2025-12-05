@@ -4,3 +4,8 @@
 {"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
 {"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
 {"level":"info","message":"Mail Server is ready to take our messages!","service":"mail-service"}
+{"level":"error","message":"Error:  Connection error: ","name":"KafkaJSNumberOfRetriesExceeded","retriable":false,"retryCount":5,"retryTime":8258,"service":"mail-service","stack":"KafkaJSNonRetriableError\n  Caused by: KafkaJSConnectionError: Connection error: \n    at Socket.onError (D:\\Users\\Laptop\\OneDrive\\Documents\\MyRoom\\mail-service\\node_modules\\kafkajs\\src\\network\\connection.js:210:23)\n    at Socket.emit (node:events:524:28)\n    at Socket.emit (node:domain:489:12)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at D:\\Users\\Laptop\\OneDrive\\Documents\\MyRoom\\mail-service\\node_modules\\async-listener\\glue.js:188:31\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Mail Server is ready to take our messages!","service":"mail-service"}
+{"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"mail-service"}
