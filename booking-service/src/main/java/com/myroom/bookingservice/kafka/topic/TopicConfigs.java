@@ -26,9 +26,9 @@ public class TopicConfigs {
 
     @Bean
     public NewTopic myRoomBookings(){
-        return TopicBuilder.name("myRoom.bookings")
-                .partitions(10)
-                .replicas(2)
+        return TopicBuilder.name("booking.mail")
+                .partitions(3)
+                .replicas(1)
                 .build();
     }
 }

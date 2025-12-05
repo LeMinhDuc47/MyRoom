@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Cacheable(value = "users", key = "#uid")
+    @Cacheable(value = "users", key = "#p0")
     public Optional<UserResponseModel> getUserByUID(String uid){
         Optional<UserResponseModel> userResponse = Optional.empty();
         try {

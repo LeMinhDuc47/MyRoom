@@ -172,3 +172,16 @@
 {"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
 {"level":"info","message":"organization-service is running at http://localhost:8085","service":"organization-service"}
 {"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"organization-service is running at http://localhost:8085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"organization-service is running at http://localhost:8085","service":"organization-service"}
+{"level":"error","message":"Error occured during starting the eureka client: AggregateError","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"organization-service is running at http://localhost:8085","service":"organization-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"organization-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"organization-service"}
+{"level":"info","message":"organization-service is running at http://localhost:8085","service":"organization-service"}

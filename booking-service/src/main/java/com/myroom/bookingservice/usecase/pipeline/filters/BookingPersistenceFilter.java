@@ -12,11 +12,14 @@ import com.myroom.bookingservice.exception.BookingServiceRuntimeException;
 import com.myroom.bookingservice.repository.BookingRepository;
 import com.myroom.bookingservice.api.constants.BookingStatus;
 import com.myroom.bookingservice.data.dto.RoomDetailsDto;
+import com.myroom.bookingservice.usecase.KafkaMessageService;
 import com.myroom.bookingservice.usecase.RoomService;
 import com.myroom.bookingservice.usecase.pipeline.BookingContext;
 import com.myroom.bookingservice.usecase.pipeline.BookingFilter;
 import com.myroom.bookingservice.usecase.pipeline.BookingFilterChain;
 import lombok.extern.slf4j.Slf4j;
+
+import org.json.JSONObject;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -31,22 +34,22 @@ public class BookingPersistenceFilter implements BookingFilter {
     private final RoomMapper roomMapper;
     private final BookingRepository bookingRepository;
     private final BookingMapper bookingMapper;
-
+private final KafkaMessageService kafkaMessageService;
     public BookingPersistenceFilter(RoomService roomService,
                                     RoomMapper roomMapper,
                                     BookingRepository bookingRepository,
-                                    BookingMapper bookingMapper) {
+                                    BookingMapper bookingMapper, KafkaMessageService kafkaMessageService) {
         this.roomService = roomService;
         this.roomMapper = roomMapper;
         this.bookingRepository = bookingRepository;
         this.bookingMapper = bookingMapper;
+        this.kafkaMessageService = kafkaMessageService;
     }
 
     @Override
     public BookingOrderResponseModel execute(BookingContext context, BookingFilterChain chain) {
         log.info("creating booking record");
         BookingRequestDetails bookingRequestDetails = context.getBookingRequestDetails();
-log.info("  [3] PersistenceFilter: Saving booking to DB...");
         try {
             RoomDetailsDto roomDetailsDto = roomService.getRoom(bookingRequestDetails.getRoomId());
             String amount = roomMapper.toAmount(roomDetailsDto);
@@ -76,6 +79,21 @@ log.info("  [3] PersistenceFilter: Saving booking to DB...");
 
             bookingDetails = bookingRepository.save(bookingDetails);
             log.info("created booking record: {}", bookingDetails);
+            try {
+                log.info("Sending Kafka notification for booking: {}", bookingDetails.getId());
+                
+                JSONObject message = new JSONObject();
+                message.put("bookingId", bookingDetails.getId());
+                message.put("uid", bookingDetails.getUid());
+                message.put("email", bookingDetails.getContactDetails().getEmailId()); 
+                message.put("status", "CREATED");
+
+                kafkaMessageService.sendMessage("booking.mail", message.toString());
+                
+            } catch (Exception e) {
+                log.error("Failed to send Kafka message: {}", e.getMessage());
+            }
+            // ---------------------------------------------------------
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
         } catch (Exception ex) {
