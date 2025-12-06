@@ -15448,3 +15448,99 @@
 {"level":"info","message":"Fetching room data for roomId: 692ab9b8714ca038e208446b","service":"room-service"}
 {"level":"info","message":"Cache hit for key room:692ab9b8714ca038e208446b","service":"room-service"}
 {"level":"info","message":"Fetched room: [object Object]","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"error","message":"Redis client error: read ECONNRESET","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"info","message":"Redis client connected to redis://localhost:6379","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: Socket closed unexpectedly","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
+{"level":"error","message":"Redis client error: ","service":"room-service"}
