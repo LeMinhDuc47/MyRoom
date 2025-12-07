@@ -1,5 +1,4 @@
-## :star2: About the Project
-MyRoom is a Hotel management web application.
+
 
 # 🛠️ High Level Design
 ![Screenshot 2024-08-02 122824](https://github.com/user-attachments/assets/26f7e20a-773f-4907-a274-400195f6f520)
@@ -40,32 +39,78 @@ https://github.com/pawanpk87/MyRoom/assets/87040096/ad4b4ebe-26a0-4051-b3dc-e608
         </tr>
     </table>
 </div>
+# MYROOM - HỆ THỐNG QUẢN LÝ KHÁCH SẠN
+
+## Tổng Quan
+
+MyRoom là một hệ thống quản lý khách sạn, được xây dựng theo kiến trúc microservice. Dự án này cung cấp một nền tảng linh hoạt, có khả năng mở rộng để xử lý các nghiệp vụ cốt lõi của việc quản lý và đặt phòng khách sạn, từ việc tìm kiếm, thanh toán đến quản lý sau khi đặt phòng.
+
+## Mục tiêu cải tiến
+Mục tiêu của việc cải tiến MyRoom là xây dựng một hệ thống có khả năng chịu tải cao, phản hồi nhanh và dễ bảo trì, tách biệt các chức năng nghiệp vụ phức tạp thành các dịch vụ độc lập.
+
+## Các cải tiến đã thực hiện
+
+### Rate Limiting
+
+Để nâng cao tính ổn định, bảo mật và khả năng phục hồi của hệ thống microservice MyRoom, một cơ chế giới hạn yêu cầu Rate Limiting đã được thiết kế và triển khai. Giải pháp này sử dụng Spring Cloud Gateway (myroom-gateway) làm cổng kiểm soát duy nhất, tích hợp với Redis để quản lý trạng thái giới hạn một cách nhất quán.
+
+### Scalability
+
+Em đã tạo thêm nhiều instance cho các service, cho hệ thống microservice hiện tại nhằm đạt được hai mục tiêu chính:
+- Tính Sẵn sàng cao (High Availability): Đảm bảo hệ thống không bị gián đoạn hay sập khi một service đơn lẻ gặp lỗi.
+- Mở rộng Hiệu năng (Performance Scaling): Phân bổ tải (load balancing) cho các service có lưu lượng truy cập cao.
+
+### Load balance
+
+Hệ thống MyRoom sử dụng cơ chế cân bằng tải với thuật toán Round Robin được tích hợp sẵn thông qua sự kết hợp của hai thành phần cốt lõi: Spring Cloud Gateway (đóng vai trò API Gateway) và Netflix Eureka (đóng vai trò Service Discovery)
+
+### Retry topic và Dead Letter Queue topic
+
+Hệ thống MyRoom sử dụng Kafka để liên lạc bất đồng bộ giữa các service. Tuy nhiên, ở cấu hình ban đầu, nếu một service "tiêu thụ" (consumer) gặp lỗi khi xử lý tin nhắn (ví dụ: mail-service không gửi được email do SMTP server tạm thời bị sập), tin nhắn đó sẽ bị bỏ qua và mất vĩnh viễn.
+Để giải quyết rủi ro này, chúng tôi đã triển khai một cơ chế xử lý lỗi mạnh mẽ bao gồm hai phần: Cơ chế Retry và Dead Letter Queue.
+
+### Distributed Transaction - SAGA pattern
+Saga Pattern được áp dụng để giải quyết chính xác vấn đề tính nhất quán. Nó là một cơ chế để quản lý tính nhất quán của dữ liệu qua nhiều service mà không cần blocking giao dịch. Một Saga đảm bảo rằng một chuỗi nghiệp vụ hoặc là thành công trọn vẹn (Happy Path), hoặc là quay lui trọn vẹn (Sad Path).
+
+### Circuit Breaker
+
+Trong kiến trúc Microservices của dự án MyRoom, các services liên tục giao tiếp với nhau thông qua mạng. Điều này tiềm ẩn rủi ro lớn về Cascading Failures:
+- Phụ thuộc nội bộ: MyRoom Gateway gọi xuống Booking Service, Booking Service lại gọi sang Payment Service. Nếu Payment Service gặp sự cố (chết hoặc phản hồi chậm), các Thread tại Booking Service sẽ bị treo (block) để chờ đợi. Khi tài nguyên cạn kiệt, Booking Service sẽ chết theo, kéo theo Gateway bị tê liệt.
+- Phụ thuộc bên thứ 3: Payment Service phụ thuộc vào API của Stripe. Nếu mạng của Stripe bị lag hoặc bảo trì, hệ thống của chúng ta không nên bị treo theo.
+- Trải nghiệm người dùng (UX): Khi hệ thống lỗi, người dùng thường phải chờ rất lâu (timeout) mới nhận được thông báo lỗi 500 khó hiểu hoặc màn hình trắng xóa.
+
+Vì vậy hệ thống cần cơ chế ngắt mạch để ngăn chặn lỗi lan truyền và tự phục hồi khi dịch vụ ổn định trở lại.
 
 
-# 🏃‍♀️ Running
+### Zipkin (Distributed Tracing)
+Trong Microservices, một hành động của người dùng (ví dụ: "Đặt phòng") không chỉ được xử lý bởi một server, mà nó nhảy qua rất nhiều nơi. Nếu không có Zipkin, logs của các service này nằm rời rạc. Chúng ta sẽ không biết dòng log này ở Booking Service có liên quan gì đến dòng log kia ở Payment Service. Ngoài ra Zipkin còn giúp chúng ta phát hiện bottleneck.
 
--   First, start the **discovery server**.
--   Run **Kafka**:
-    ```
-    Kafka with ZooKeeper	
-    Run the following commands in order to start all services in the correct order:
-    # Start the ZooKeeper service $ bin/zookeeper-server-start.sh config/zookeeper.properties
-    Open another terminal session and run:
-    # Start the Kafka broker service $ bin/kafka-server-start.sh config/server.properties
-    ```
--   Start the **auth server** [Auth Server](https://github.com/pawanpk87/MyRoom/tree/main/auth-server#how-to-run-auth-server).
--   Start the **MyRoom gateway**.
--   Then run all the services one by one: **booking service**, **onboarding server**, **organization pay service**, **organization service**, **payment server**, **review service**, **room service**, **mail service**.
--   Run both frontend apps: **MyRoom client**, **MyRoom Admin client**.
--   Use **Stripe CLI** to trigger Stripe webhook events. Refer to [Stripe Documentation](https://docs.stripe.com/payments/handling-payment-events#use-cli).
+### ELK (Elasticsearch - Logstash - Kibana)
+
+
+### Cache data
+
+### Health enpoint monitoring
+
+
+### Prometheus và Grafana
 
 
 
 
-<!-- CONTACT -->
-## Contact
+### Distributed lock
 
-Pawan Kumar Mehta - arowpk@gmail.com
+### Pipe and filter
 
-Project Link: [https://github.com/pawanpk87/MyRoom](https://github.com/pawanpk87/MyRoom)
+
+
+### Competing consumer
+
+
+
+
+
+
+
+
 
