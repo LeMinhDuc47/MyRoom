@@ -85,3 +85,54 @@
 {"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
 {"level":"info","message":"Sending a mail","service":"mail-service"}
 {"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Mail Server is ready to take our messages!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T04:23:42.314742Z","bookingRequestId":"bk_req_GpLiM75vCMlTUAXjf3UP","checkIn":"2025-12-07T04:23:22.722Z","checkOut":"2025-12-08T04:23:22.722Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T04:23:42.324071Z","guests":{"adults":1,"children":0},"id":"bk_nJ4A2vDu3ulFxaPLzeti","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":null,"stripePaymentServiceProvider":null},"paymentType":"PAY_AT_HOTEL","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PAY_AT_HOTEL","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T04:23:42.548196Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T04:25:28.741838Z","bookingRequestId":"bk_req_7fM21t4DxuftI4rSG4AF","checkIn":"2025-12-07T04:25:18.517Z","checkOut":"2025-12-08T04:25:18.517Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T04:25:28.745093Z","guests":{"adults":1,"children":0},"id":"bk_sScCMMJBh53H9OIvmUMS","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T04:25:28.745093Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T04:29:02.266621Z","bookingRequestId":"bk_req_O11Ulwzoq3WQvi4qcYRh","checkIn":"2025-12-07T04:28:52.992Z","checkOut":"2025-12-08T04:28:52.992Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T04:29:02.269424Z","guests":{"adults":1,"children":0},"id":"bk_f8xCyWFBnd8q7hIZw2b9","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T04:29:02.269424Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T04:29:02.266621Z","bookingRequestId":"bk_req_O11Ulwzoq3WQvi4qcYRh","checkIn":"2025-12-07T04:28:52.992Z","checkOut":"2025-12-08T04:28:52.992Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T04:29:02.269424Z","guests":{"adults":1,"children":0},"id":"bk_f8xCyWFBnd8q7hIZw2b9","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":{"amount":"120000","id":"cs_test_a1ZVJot8EDUlp9lJxxYFo2j70X1yL3atkNNKJ03VtVbrRCfrnkamRpx7JB","status":"open","url":"https://checkout.stripe.com/c/pay/cs_test_a1ZVJot8EDUlp9lJxxYFo2j70X1yL3atkNNKJ03VtVbrRCfrnkamRpx7JB#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blpxYHZxWjA0Vk1hfW5Xf2BmcHY8MEBMR0NDXEd9X3M2QWNKan90UkIyVjFDT3FBaEZza39qf3NWYTFIM3NgSkZWUTBET3VUY2JUVWdAUGo2aW1JbVZgZHRrXDJ0PXJyNTVdZnVLR051cycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl"}},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"CANCELLED","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T04:30:05.325369Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
