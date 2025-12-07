@@ -255,7 +255,7 @@ export async function checkAvailabilityHandler(
 export async function getRoomsHandler(req: Request<{}, {}, {}>, res: Response) {
   logger.info(`Received get all room request`);
   logger.info(`The query is: `, req.query);
-
+// logger.info(`[PORT ${process.env.PORT || 8086}] Handling GET /rooms request`);                                      
   try {
     const { page = 1, limit = 10 } = req.query;
     const pageNumber = Number(page);
