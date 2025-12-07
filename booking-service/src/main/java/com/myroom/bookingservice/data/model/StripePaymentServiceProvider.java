@@ -22,6 +22,7 @@ public class StripePaymentServiceProvider{
     public enum StripePaymentStatus{
         open,
         complete,
-        expired
+        expired,
+        PAYMENT_PENDING
     }
 }

@@ -1,9 +1,10 @@
 package com.myroom.bookingservice.client;
 
-import com.myroom.bookingservice.client.dto.PaymentResponse;
+import com.myroom.bookingservice.data.dto.OnlinePaymentOrderResponseDto;
+import com.myroom.bookingservice.data.dto.PaymentOrderRequestDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
         name = "PAYMENT-SERVICE",
@@ -13,6 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 )
 public interface PaymentServiceClient {
 
-    @GetMapping("/payments/{id}")
-    PaymentResponse getPayment(@PathVariable("id") String id);
+    @PostMapping(value = "/orders")
+    OnlinePaymentOrderResponseDto createPaymentOrder(@RequestBody PaymentOrderRequestDto request);
 }
