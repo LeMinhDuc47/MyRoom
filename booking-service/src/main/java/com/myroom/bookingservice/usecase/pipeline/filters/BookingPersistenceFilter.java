@@ -12,6 +12,7 @@ import com.myroom.bookingservice.exception.BookingServiceRuntimeException;
 import com.myroom.bookingservice.repository.BookingRepository;
 import com.myroom.bookingservice.api.constants.BookingStatus;
 import com.myroom.bookingservice.data.dto.RoomDetailsDto;
+import com.myroom.bookingservice.usecase.BookingOutboxService;
 import com.myroom.bookingservice.usecase.KafkaMessageService;
 import com.myroom.bookingservice.usecase.RoomService;
 import com.myroom.bookingservice.usecase.pipeline.BookingContext;
@@ -22,6 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 
@@ -34,19 +36,22 @@ public class BookingPersistenceFilter implements BookingFilter {
     private final RoomMapper roomMapper;
     private final BookingRepository bookingRepository;
     private final BookingMapper bookingMapper;
-private final KafkaMessageService kafkaMessageService;
+    private final BookingOutboxService outboxService;
+    
     public BookingPersistenceFilter(RoomService roomService,
                                     RoomMapper roomMapper,
                                     BookingRepository bookingRepository,
-                                    BookingMapper bookingMapper, KafkaMessageService kafkaMessageService) {
+                                    BookingMapper bookingMapper, 
+                                    BookingOutboxService outboxService) {
         this.roomService = roomService;
         this.roomMapper = roomMapper;
         this.bookingRepository = bookingRepository;
         this.bookingMapper = bookingMapper;
-        this.kafkaMessageService = kafkaMessageService;
+        this.outboxService = outboxService;
     }
 
     @Override
+    @Transactional
     public BookingOrderResponseModel execute(BookingContext context, BookingFilterChain chain) {
         log.info("creating booking record");
         BookingRequestDetails bookingRequestDetails = context.getBookingRequestDetails();
@@ -77,23 +82,26 @@ private final KafkaMessageService kafkaMessageService;
             bookingDetails.setPaymentMetaDataModel(bookingPaymentMetaDataModel);
             bookingDetails.setStatus(status);
 
+            // Save booking details
             bookingDetails = bookingRepository.save(bookingDetails);
             log.info("created booking record: {}", bookingDetails);
-            try {
-                log.info("Sending Kafka notification for booking: {}", bookingDetails.getId());
-                
-                JSONObject message = new JSONObject();
-                message.put("bookingId", bookingDetails.getId());
-                message.put("uid", bookingDetails.getUid());
-                message.put("email", bookingDetails.getContactDetails().getEmailId()); 
-                message.put("status", "CREATED");
-
-                kafkaMessageService.sendMessage("booking.mail", message.toString());
-                
-            } catch (Exception e) {
-                log.error("Failed to send Kafka message: {}", e.getMessage());
-            }
-            // ---------------------------------------------------------
+            
+            // Create outbox event in the same transaction as domain change
+            // This guarantees either both succeed or both fail
+            JSONObject message = new JSONObject();
+            message.put("bookingId", bookingDetails.getId());
+            message.put("uid", bookingDetails.getUid());
+            message.put("email", bookingDetails.getContactDetails().getEmailId()); 
+            message.put("status", "CREATED");
+            
+            outboxService.createOutboxEvent(
+                bookingDetails.getId(),
+                "BOOKING_CREATED",
+                "booking.mail",
+                message.toString()
+            );
+            log.info("Created outbox event for booking: {}", bookingDetails.getId());
+            
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
         } catch (Exception ex) {
