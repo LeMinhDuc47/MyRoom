@@ -21,7 +21,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/myroom
     username: root
-    password: leminhduc472005
+    password: dovandung05062005@mysql
 
   jpa:
     show-sql: true

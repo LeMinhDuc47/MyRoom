@@ -592,3 +592,6 @@
 {"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
 {"level":"info","message":"Sending a mail","service":"mail-service"}
 {"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Kafka consumer started successfully","service":"mail-service"}
+{"level":"info","message":"mail-service is running at http://localhost:8089","service":"mail-service"}
+{"level":"info","message":"Mail Server is ready to take our messages!","service":"mail-service"}

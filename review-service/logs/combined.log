@@ -556,3 +556,6 @@
 {"level":"info","message":"Received get overall review data request","service":"review-service"}
 {"level":"info","message":"Fetching overall rating for roomId: 692ab9b8714ca038e208446b","service":"review-service"}
 {"level":"info","message":"Fetched overall rating: [object Object]","service":"review-service"}
+{"level":"info","message":"Trying to connect MongoDB...","service":"review-service"}
+{"level":"info","message":"Successfully connected to MongoDB","service":"review-service"}
+{"level":"info","message":"review-service is running at http://localhost:8088","service":"review-service"}

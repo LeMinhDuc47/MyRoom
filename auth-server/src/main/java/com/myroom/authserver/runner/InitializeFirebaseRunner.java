@@ -16,7 +16,7 @@ public class InitializeFirebaseRunner implements ApplicationRunner {
         log.info("Initializing Firebase...");
         FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.getApplicationDefault())
-                .setProjectId("myroom-c4c9f")
+                .setProjectId("my-firebase-39e60")
                 .build();
         FirebaseApp.initializeApp(options);
         log.info("Firebase initialized!");

@@ -23,7 +23,7 @@ spring:
 # Firebase Configuration
 security:
   firebase-props:
-    database-url: ${FIREBASE_DATABASE}
+    database-url: https://my-firebase-39e60-default-rtdb.firebaseio.com/
     enable-strict-server-session: false
     enable-check-session-revoked: false
     enable-logout-everywhere: false
