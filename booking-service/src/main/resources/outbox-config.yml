@@ -1,0 +1,20 @@
+# Outbox Pattern Configuration
+# This configuration enables the scheduled outbox publisher for guaranteed message delivery
+
+spring:
+  # Scheduling configuration for OutboxPublisher
+  task:
+    scheduling:
+      pool:
+        size: 2
+      thread-name-prefix: "booking-outbox-"
+      enable-vtop: true
+      shutdown:
+        await-termination: true
+        await-termination-period: 20s
+
+# Log levels
+logging:
+  level:
+    com.myroom.bookingservice.usecase.impl.BookingOutboxPublisher: DEBUG
+    com.myroom.bookingservice.usecase.impl.BookingOutboxServiceImpl: DEBUG
