@@ -59,8 +59,8 @@ spring:
 
 resilience4j:
   circuitbreaker:
-    instances:
-      paymentServiceCB:
+    configs:
+      default:
         registerHealthIndicator: true
         slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
@@ -70,7 +70,18 @@ resilience4j:
         waitDurationInOpenState: 10s
         failureRateThreshold: 50
         eventConsumerBufferSize: 10
+    instances:
+      PaymentServiceClientcreatePaymentOrderPaymentOrderRequestDto:
+        base-config: default
 
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 10s
+        cancelRunningFuture: true
+    instances:
+      PaymentServiceClientcreatePaymentOrderPaymentOrderRequestDto:
+        base-config: default
 # Eureka Configuration
 eureka:
   client:
@@ -94,3 +105,10 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
+feign:
+  client:
+    config:
+      PAYMENT-SERVICE:
+        connectTimeout: 5000      # 5s
+        readTimeout: 15000

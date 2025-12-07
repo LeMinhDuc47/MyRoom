@@ -136,3 +136,459 @@
 {"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
 {"level":"info","message":"Sending a mail","service":"mail-service"}
 {"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T05:23:01.356131Z","bookingRequestId":"bk_req_fwbilkwUguIXaH9dcwZC","checkIn":"2025-12-07T05:22:45.928Z","checkOut":"2025-12-08T05:22:45.928Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:23:01.361728Z","guests":{"adults":1,"children":0},"id":"bk_pVs1FV1Uz1umsqDlpQk5","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":null,"stripePaymentServiceProvider":null},"paymentType":"PAY_AT_HOTEL","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PAY_AT_HOTEL","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:23:01.544418Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T05:23:53.157250Z","bookingRequestId":"bk_req_w6tmwzgKzKvcpuVUIzrK","checkIn":"2025-12-07T05:23:41.174Z","checkOut":"2025-12-08T05:23:41.174Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T05:23:53.159071Z","guests":{"adults":1,"children":0},"id":"bk_tcQ0BBOOjZJx9OWapvFc","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:23:53.159071Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T05:24:05.654600Z","bookingRequestId":"bk_req_w6tmwzgKzKvcpuVUIzrK","checkIn":"2025-12-07T05:23:41.174Z","checkOut":"2025-12-08T05:23:41.174Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T05:24:05.657616Z","guests":{"adults":1,"children":0},"id":"bk_vTXZQFZ5XTapsMPC5OW2","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:24:05.657616Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T05:24:58.504685Z","bookingRequestId":"bk_req_w6tmwzgKzKvcpuVUIzrK","checkIn":"2025-12-07T05:23:41.174Z","checkOut":"2025-12-08T05:23:41.174Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T05:24:58.507116Z","guests":{"adults":1,"children":0},"id":"bk_QNult909Bu2d0DwN2dBo","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:24:58.507116Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T05:25:31.724570Z","bookingRequestId":"bk_req_w6tmwzgKzKvcpuVUIzrK","checkIn":"2025-12-07T05:23:41.174Z","checkOut":"2025-12-08T05:23:41.174Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T05:25:31.729856Z","guests":{"adults":1,"children":0},"id":"bk_VJfHO8w8VMYyrFIUSaXi","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:25:31.729856Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:27:02.769668Z","bookingRequestId":"bk_req_hDvuSEORgWmXTurQGWIw","checkIn":"2025-12-07T05:26:51.480Z","checkOut":"2025-12-08T05:26:51.480Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T05:27:02.774757Z","guests":{"adults":1,"children":0},"id":"bk_sZJMMYVgLgS3vq5FeM35","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":null,"stripePaymentServiceProvider":null},"paymentType":"PAY_AT_HOTEL","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PAY_AT_HOTEL","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:27:02.900702Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T05:27:28.215136Z","bookingRequestId":"bk_req_RIpEsXAMueu1VcasXPU1","checkIn":"2025-12-07T05:27:14.663Z","checkOut":"2025-12-08T05:27:14.663Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:27:28.218615Z","guests":{"adults":1,"children":0},"id":"bk_fN1opajk6ApGs6IHYPVp","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:27:28.218615Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:31:10.170766Z","bookingRequestId":"bk_req_0r5XqPRXxWylxBMvlO7l","checkIn":"2025-12-07T05:30:53.633Z","checkOut":"2025-12-08T05:30:53.633Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:31:10.176808Z","guests":{"adults":1,"children":0},"id":"bk_bLi6eGCYUyjM0BIybvPs","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:31:10.176808Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:56:21.677092Z","bookingRequestId":"bk_req_BlgULVtaPfUFnQ0E4f4i","checkIn":"2025-12-07T05:56:10.316Z","checkOut":"2025-12-08T05:56:10.316Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:56:21.684242Z","guests":{"adults":1,"children":0},"id":"bk_JgfXVwyXCVru5Z5SHCqf","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:56:21.684242Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:57:07.044921Z","bookingRequestId":"bk_req_BlgULVtaPfUFnQ0E4f4i","checkIn":"2025-12-07T05:56:10.316Z","checkOut":"2025-12-08T05:56:10.316Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:57:07.065855Z","guests":{"adults":1,"children":0},"id":"bk_9XmxkceZBxFU40I14McB","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:57:07.065855Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:57:20.301676Z","bookingRequestId":"bk_req_BlgULVtaPfUFnQ0E4f4i","checkIn":"2025-12-07T05:56:10.316Z","checkOut":"2025-12-08T05:56:10.316Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:57:20.305683Z","guests":{"adults":1,"children":0},"id":"bk_TGinvnILrrktp1lvTOm8","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:57:20.305683Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:57:29.425846Z","bookingRequestId":"bk_req_BlgULVtaPfUFnQ0E4f4i","checkIn":"2025-12-07T05:56:10.316Z","checkOut":"2025-12-08T05:56:10.316Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:57:29.428392Z","guests":{"adults":1,"children":0},"id":"bk_XtENS0kEj9HKH5GqNHOe","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:57:29.428392Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T05:58:39.742769Z","bookingRequestId":"bk_req_BlgULVtaPfUFnQ0E4f4i","checkIn":"2025-12-07T05:56:10.316Z","checkOut":"2025-12-08T05:56:10.316Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T05:58:39.744534Z","guests":{"adults":1,"children":0},"id":"bk_qqb3umYfL6rEzrmIE9h1","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T05:58:39.744534Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:10:57.624853Z","bookingRequestId":"bk_req_ztuojr25ZejLmOZbb1Dw","checkIn":"2025-12-07T06:10:45.818Z","checkOut":"2025-12-08T06:10:45.818Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:10:57.631440Z","guests":{"adults":1,"children":0},"id":"bk_4hdDpa0xQet4LxBh6Zyn","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:10:57.631440Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:11:11.889979Z","bookingRequestId":"bk_req_ztuojr25ZejLmOZbb1Dw","checkIn":"2025-12-07T06:10:45.818Z","checkOut":"2025-12-08T06:10:45.818Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:11:11.891980Z","guests":{"adults":1,"children":0},"id":"bk_u7tOy0IwaDC75opcYdTf","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:11:11.891980Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T06:38:16.480591Z","bookingRequestId":"bk_req_aICSsnADoBGwXsicIlMW","checkIn":"2025-12-07T06:38:06.558Z","checkOut":"2025-12-08T06:38:06.558Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:38:16.494308Z","guests":{"adults":1,"children":0},"id":"bk_qLkEdRlVKjObbMFD5MD9","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:38:16.494308Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:43:57.989086Z","bookingRequestId":"bk_req_adwoNA6kzJgxwBOiClJR","checkIn":"2025-12-07T06:43:49.322Z","checkOut":"2025-12-08T06:43:49.322Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:43:57.993043Z","guests":{"adults":1,"children":0},"id":"bk_UFS1ZnEvKWSCi4Pip3s4","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:43:57.993043Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:44:15.435662Z","bookingRequestId":"bk_req_adwoNA6kzJgxwBOiClJR","checkIn":"2025-12-07T06:43:49.322Z","checkOut":"2025-12-08T06:43:49.322Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:44:15.441412Z","guests":{"adults":1,"children":0},"id":"bk_xDYsNtZ4oB8HbPuKC6wR","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:44:15.441412Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:45:25.627068Z","bookingRequestId":"bk_req_adwoNA6kzJgxwBOiClJR","checkIn":"2025-12-07T06:43:49.322Z","checkOut":"2025-12-08T06:43:49.322Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:45:25.628413Z","guests":{"adults":1,"children":0},"id":"bk_hP6QCiay1VXSyYEMaAoD","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:45:25.628413Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":0,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T06:52:09.130391Z","bookingRequestId":"bk_req_adwoNA6kzJgxwBOiClJR","checkIn":"2025-12-07T06:43:49.322Z","checkOut":"2025-12-08T06:43:49.322Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:52:09.136118Z","guests":{"adults":1,"children":0},"id":"bk_sbrEbC3FWEHWebDpX6Zu","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:52:09.136118Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T06:54:23.030204Z","bookingRequestId":"bk_req_Dwm7U8sXZ9XsDC7TKM4D","checkIn":"2025-12-07T06:54:13.921Z","checkOut":"2025-12-08T06:54:13.921Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:54:23.036133Z","guests":{"adults":1,"children":0},"id":"bk_krQIFgtqvZgEdrRtU8rh","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:54:23.036133Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1200","bookingDate":"2025-12-07T06:57:27.934659Z","bookingRequestId":"bk_req_bL7nrHjve0dV3McmCL7G","checkIn":"2025-12-07T06:57:15.799Z","checkOut":"2025-12-08T06:57:15.799Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T06:57:27.938193Z","guests":{"adults":1,"children":0},"id":"bk_3FqRdilftaAbAwyMCPqg","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1200","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abc84714ca038e208448d","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"900","roomService":"200"},"title":"FLC Grand Hotel Samson"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T06:57:27.938193Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:19:37.048972Z","bookingRequestId":"bk_req_I22w6jcE2clMryTEdu2D","checkIn":"2025-12-07T07:19:28.795Z","checkOut":"2025-12-08T07:19:28.795Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:19:37.053583Z","guests":{"adults":1,"children":0},"id":"bk_nkRiGi2QQZPYKXQ0TcUj","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:19:37.053583Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:22:04.573743Z","bookingRequestId":"bk_req_YNOpq5ymcKEv84eBx11w","checkIn":"2025-12-07T07:21:07.175Z","checkOut":"2025-12-08T07:21:07.175Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:22:04.579611Z","guests":{"adults":1,"children":0},"id":"bk_3Ofamcp78uwJmu6hNUhy","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:22:04.579611Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:31:54.978814Z","bookingRequestId":"bk_req_eleqSRdP9YIcfJlsBN90","checkIn":"2025-12-07T07:31:45.401Z","checkOut":"2025-12-08T07:31:45.401Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:31:54.987265Z","guests":{"adults":1,"children":0},"id":"bk_8bSGBnUnVjOpAkSokIyM","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:31:54.987265Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:39:30.128054Z","bookingRequestId":"bk_req_ARE7VP4cDPjzfTiczVpE","checkIn":"2025-12-07T07:39:19.499Z","checkOut":"2025-12-08T07:39:19.499Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:39:30.128843Z","guests":{"adults":1,"children":0},"id":"bk_J4nRLJVUB5bxW4fyLCKP","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:39:30.128843Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:42:50.648807Z","bookingRequestId":"bk_req_oj5pEikHVW79brSEgGJo","checkIn":"2025-12-07T07:42:40.637Z","checkOut":"2025-12-08T07:42:40.637Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:42:50.650864Z","guests":{"adults":1,"children":0},"id":"bk_EgyBHusq4TNdZYesFC75","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:42:50.650864Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1500","bookingDate":"2025-12-07T07:44:58.056048Z","bookingRequestId":"bk_req_2lcEfFbrdsTQcLoLal5T","checkIn":"2025-12-07T07:44:48.499Z","checkOut":"2025-12-08T07:44:48.499Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:44:58.057839Z","guests":{"adults":1,"children":0},"id":"bk_2NIuy4T38tDAnB2Tuc7m","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1500","currency":"inr","paymentMethodType":null,"stripePaymentServiceProvider":null},"paymentType":"PAY_AT_HOTEL","roomDetails":{"id":"692abb9c714ca038e208447e","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"100","currency":"inr","price":"1200","roomService":"200"},"title":"M Hotel Danang"},"service":"mail-service","status":"PAY_AT_HOTEL","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:44:58.076140Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T07:47:17.398873Z","bookingRequestId":"bk_req_8qN5pWa69lgNTtpu6wf9","checkIn":"2025-12-07T07:47:08.736Z","checkOut":"2025-12-08T07:47:08.736Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:47:17.401358Z","guests":{"adults":1,"children":0},"id":"bk_LNcHdVO9zG7Jk2h9MXlU","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":null,"stripePaymentServiceProvider":null},"paymentType":"PAY_AT_HOTEL","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PAY_AT_HOTEL","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:47:17.414084Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T07:47:28.138013Z","bookingRequestId":"bk_req_D8xzEExUWHvunS9DCRgy","checkIn":"2025-12-07T07:47:08.736Z","checkOut":"2025-12-08T07:47:08.736Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:47:28.140874Z","guests":{"adults":1,"children":0},"id":"bk_BXQffkbMK4XLuiDY8Vtk","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:47:28.140874Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T07:50:02.025556Z","bookingRequestId":"bk_req_eJyzxg5gevWAn6t0ZarG","checkIn":"2025-12-07T07:49:52.332Z","checkOut":"2025-12-08T07:49:52.332Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T07:50:02.031327Z","guests":{"adults":1,"children":0},"id":"bk_esTzoDTjOR7ymEhnkoFV","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T07:50:02.031327Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:04:22.510666Z","bookingRequestId":"bk_req_amL4JWzNjmvKkDYtvb0g","checkIn":"2025-12-07T08:04:09.991Z","checkOut":"2025-12-08T08:04:09.991Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T08:04:22.513472Z","guests":{"adults":1,"children":0},"id":"bk_JvAW44HUHtmTAzoABlz8","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:04:22.513472Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:23:56.621087Z","bookingRequestId":"bk_req_aY3MNtwN3OTFlBUp3eBf","checkIn":"2025-12-07T08:23:44.472Z","checkOut":"2025-12-08T08:23:44.472Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T08:23:56.625934Z","guests":{"adults":1,"children":0},"id":"bk_xPVYBlQXjfMB5Gp8F8P2","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:23:56.625934Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:24:59.065545Z","bookingRequestId":"bk_req_o3HgL0h57QTy00x61I2e","checkIn":"2025-12-07T08:24:50.488Z","checkOut":"2025-12-08T08:24:50.489Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T08:24:59.068115Z","guests":{"adults":1,"children":0},"id":"bk_0WPEfL4ToZ5A85tpXoGx","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:24:59.068115Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:25:52.374366Z","bookingRequestId":"bk_req_Jv7M1mRovqagofIqRP8e","checkIn":"2025-12-07T08:25:43.608Z","checkOut":"2025-12-08T08:25:43.608Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"5234234234"},"createdAt":"2025-12-07T08:25:52.378086Z","guests":{"adults":1,"children":0},"id":"bk_rNNs72Tq8strT1XMKZJp","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:25:52.378086Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":2,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:33:31.426085Z","bookingRequestId":"bk_req_YSXmqHxDvyUKEB3VlH0c","checkIn":"2025-12-07T08:33:21.292Z","checkOut":"2025-12-08T08:33:21.292Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T08:33:31.427239Z","guests":{"adults":1,"children":0},"id":"bk_PjthCW23HWU1DEseuQ0w","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:33:31.427239Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:36:36.644066Z","bookingRequestId":"bk_req_rxw5yQCgNr7AFMR4hJZ8","checkIn":"2025-12-07T08:36:27.392Z","checkOut":"2025-12-08T08:36:27.392Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T08:36:36.651091Z","guests":{"adults":1,"children":0},"id":"bk_uu8giFkVWA9Bh2DvqHeS","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:36:36.651091Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
+{"level":"info","message":"Received booking mail event (kafka topic: 'booking.mail') with payload:  [object Object]","partition":1,"service":"mail-service","topic":"booking.mail"}
+{"level":"info","message":"Handling booking mail event","service":"mail-service"}
+{"level":"info","message":"Attempting to get booking details for id:","service":"mail-service"}
+{"level":"info","message":"fetching BOOKING-SERVICE URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched BOOKING-SERVICE URI: http://192.168.1.195:8082","service":"mail-service"}
+{"amount":"1350","bookingDate":"2025-12-07T08:37:08.355501Z","bookingRequestId":"bk_req_bIpFJ4V5h6pinS4THrts","checkIn":"2025-12-07T08:36:58.826Z","checkOut":"2025-12-08T08:36:58.826Z","contactDetails":{"emailId":"fmgduc47@gmail.com","fullName":"Đức Lê","phoneNumber":"0949128729"},"createdAt":"2025-12-07T08:37:08.357841Z","guests":{"adults":1,"children":0},"id":"bk_kfEIhybk54BYZchtf7r0","level":"info","message":"Booking data retrived successfully: ","paymentMetaDataModel":{"amount":"1350","currency":"inr","paymentMethodType":"STRIPE","stripePaymentServiceProvider":null},"paymentType":"ONLINE_PAYMENT","roomDetails":{"id":"692ab9b8714ca038e208446b","organizationId":"692ab2e4e8f8d781960ebacf","prices":{"cleaningFee":"50","currency":"inr","price":"1200","roomService":"100"},"title":"Aaron Boutique Hotel"},"service":"mail-service","status":"PENDING_PAYMENT","uid":"3edcBmQfHXg8WUGXCKdUizicAe43","updatedAt":"2025-12-07T08:37:08.357841Z"}
+{"level":"info","message":"Attempting to get user details for id:","service":"mail-service"}
+{"level":"info","message":"fetching AUTH-SERVER URI from discovery server","service":"mail-service"}
+{"level":"info","message":"fetched AUTH-SERVER URI: http://192.168.1.195:8081","service":"mail-service"}
+{"email":"fmgduc47@gmail.com","emailVerified":true,"level":"info","message":"User data retrived successfully: ","name":"Đức Lê","picture":"https://lh3.googleusercontent.com/a/ACg8ocIUEMbGwAU5kwgWLTXBTZWVQtODR_hldEfDoVV2chksfRfQkvE=s96-c","providerId":"firebase","service":"mail-service","uid":"3edcBmQfHXg8WUGXCKdUizicAe43"}
+{"level":"info","message":"Sending a mail","service":"mail-service"}
+{"level":"info","message":"Message sent successfully!","service":"mail-service"}
