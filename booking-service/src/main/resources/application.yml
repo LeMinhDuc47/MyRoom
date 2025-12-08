@@ -112,3 +112,10 @@ feign:
       PAYMENT-SERVICE:
         connectTimeout: 5000      # 5s
         readTimeout: 15000
+
+# Outbox Pattern 
+outbox:
+  kafka:
+    topic: booking.mail           
+  relay:
+    interval: 10000               

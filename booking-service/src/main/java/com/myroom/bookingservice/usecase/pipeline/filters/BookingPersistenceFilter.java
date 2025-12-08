@@ -17,11 +17,12 @@ import com.myroom.bookingservice.usecase.RoomService;
 import com.myroom.bookingservice.usecase.pipeline.BookingContext;
 import com.myroom.bookingservice.usecase.pipeline.BookingFilter;
 import com.myroom.bookingservice.usecase.pipeline.BookingFilterChain;
+import com.myroom.bookingservice.outbox.OutboxService;
 import lombok.extern.slf4j.Slf4j;
 
-import org.json.JSONObject;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 
@@ -34,19 +35,22 @@ public class BookingPersistenceFilter implements BookingFilter {
     private final RoomMapper roomMapper;
     private final BookingRepository bookingRepository;
     private final BookingMapper bookingMapper;
-private final KafkaMessageService kafkaMessageService;
+    private final OutboxService outboxService;
+
     public BookingPersistenceFilter(RoomService roomService,
                                     RoomMapper roomMapper,
                                     BookingRepository bookingRepository,
-                                    BookingMapper bookingMapper, KafkaMessageService kafkaMessageService) {
+                                    BookingMapper bookingMapper,
+                                    OutboxService outboxService) {
         this.roomService = roomService;
         this.roomMapper = roomMapper;
         this.bookingRepository = bookingRepository;
         this.bookingMapper = bookingMapper;
-        this.kafkaMessageService = kafkaMessageService;
+        this.outboxService = outboxService;
     }
 
     @Override
+    @Transactional
     public BookingOrderResponseModel execute(BookingContext context, BookingFilterChain chain) {
         log.info("creating booking record");
         BookingRequestDetails bookingRequestDetails = context.getBookingRequestDetails();
@@ -79,21 +83,11 @@ private final KafkaMessageService kafkaMessageService;
 
             bookingDetails = bookingRepository.save(bookingDetails);
             log.info("created booking record: {}", bookingDetails);
-            try {
-                log.info("Sending Kafka notification for booking: {}", bookingDetails.getId());
-                
-                JSONObject message = new JSONObject();
-                message.put("bookingId", bookingDetails.getId());
-                message.put("uid", bookingDetails.getUid());
-                message.put("email", bookingDetails.getContactDetails().getEmailId()); 
-                message.put("status", "CREATED");
 
-                kafkaMessageService.sendMessage("booking.mail", message.toString());
-                
-            } catch (Exception e) {
-                log.error("Failed to send Kafka message: {}", e.getMessage());
-            }
-            // ---------------------------------------------------------
+            // Save outbox event for booking created 
+            outboxService.saveBookingCreatedEvent(bookingDetails);
+            log.info("Saved outbox event for booking: {}", bookingDetails.getId());
+
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
         } catch (Exception ex) {
