@@ -46,28 +46,29 @@ public class BookingOutboxPublisher {
      * Runs every 1 second (fixedDelay = 1000ms)
      * 
      * This scheduler automatically runs in background without any manual trigger
+     * 
+     * PATTERN DISABLED: @Scheduled commented out
+     * To ENABLE pattern: Uncomment @Scheduled below
+     * To DISABLE pattern: Keep commented (background job won't run)
      */
-    @Scheduled(fixedDelay = 1000)  // Every 1 second
-    @Transactional
+    // @Scheduled(fixedDelay = 1000)  // Every 1 second
+    // @Transactional
     public void publishPendingEvents() {
         try {
-            // 1. Find all PENDING events (processed = false), ordered by creation time
+            // Find all PENDING events (processed = false), ordered by creation time
             List<OutboxEvent> pendingEvents = outboxEventRepository.findByProcessedFalseOrderByCreatedAtAsc();
             
             if (pendingEvents.isEmpty()) {
-                // No pending events, nothing to do
                 return;
             }
             
             log.info("Found {} pending outbox events to publish", pendingEvents.size());
             
-            // 2. Try to publish each event
+            // Try to publish each event
             for (OutboxEvent event : pendingEvents) {
                 try {
                     publishEventToKafka(event);
                 } catch (Exception e) {
-                    // Log error but continue with next event
-                    // Event stays in DB with processed=false, will retry next cycle
                     log.error("Failed to publish outbox event {}: {}", event.getId(), e.getMessage());
                 }
             }
@@ -79,10 +80,9 @@ public class BookingOutboxPublisher {
     /**
      * Publish single outbox event to Kafka
      * 
-     * Steps:
-     * 1. Send message to Kafka topic
-     * 2. On success: Mark event as processed (processed=true)
-     * 3. On failure: Leave as is (processed=false), will retry next cycle
+     * Send message to Kafka topic
+     * On success: Mark event as processed (processed=true)
+     * On failure: Leave as is (processed=false), will retry next cycle
      */
     private void publishEventToKafka(OutboxEvent event) {
         try {
@@ -112,7 +112,6 @@ public class BookingOutboxPublisher {
             
         } catch (Exception e) {
             log.error("Failed to send outbox event {} to Kafka: {}", event.getId(), e.getMessage());
-            // Don't mark as processed, will retry next cycle
             throw new RuntimeException("Failed to publish event to Kafka: " + e.getMessage(), e);
         }
     }

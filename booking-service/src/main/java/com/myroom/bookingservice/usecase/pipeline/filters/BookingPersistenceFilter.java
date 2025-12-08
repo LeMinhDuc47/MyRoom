@@ -50,7 +50,10 @@ public class BookingPersistenceFilter implements BookingFilter {
     }
 
     @Override
-    @Transactional
+    // PATTERN DISABLED: @Transactional commented out
+    // To ENABLE pattern: Uncomment @Transactional below
+    // To DISABLE pattern: Keep commented
+    // @Transactional
     public BookingOrderResponseModel execute(BookingContext context, BookingFilterChain chain) {
         log.info("creating booking record");
         BookingRequestDetails bookingRequestDetails = context.getBookingRequestDetails();
@@ -84,13 +87,11 @@ public class BookingPersistenceFilter implements BookingFilter {
             bookingDetails = bookingRepository.save(bookingDetails);
             log.info("created booking record: {}", bookingDetails);
 
-            // Save outbox event for booking created 
-            outboxService.saveBookingCreatedEvent(bookingDetails);
-            log.info("Saved outbox event for booking: {}", bookingDetails.getId());
-
-            //disable TOP
-            //bookingRepository.save(booking); 
-            //kafkaTemplate.send(TOPIC, message);
+            // PATTERN DISABLED (commented out temporarily for testing WITHOUT pattern)
+            // To ENABLE pattern: Uncomment lines below
+            // To DISABLE pattern: Keep commented
+            // outboxService.saveBookingCreatedEvent(bookingDetails);
+            // log.info("Saved outbox event for booking: {}", bookingDetails.getId());
 
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
