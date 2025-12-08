@@ -88,6 +88,10 @@ public class BookingPersistenceFilter implements BookingFilter {
             outboxService.saveBookingCreatedEvent(bookingDetails);
             log.info("Saved outbox event for booking: {}", bookingDetails.getId());
 
+            // DISABLED TOP
+            // outboxService.saveBookingCreatedEvent(bookingDetails);
+            // log.info("Saved outbox event for booking: {}", bookingDetails.getId());
+
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
         } catch (Exception ex) {
