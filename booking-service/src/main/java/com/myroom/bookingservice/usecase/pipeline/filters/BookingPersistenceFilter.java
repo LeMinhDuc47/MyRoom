@@ -88,9 +88,9 @@ public class BookingPersistenceFilter implements BookingFilter {
             outboxService.saveBookingCreatedEvent(bookingDetails);
             log.info("Saved outbox event for booking: {}", bookingDetails.getId());
 
-            // DISABLED TOP
-            // outboxService.saveBookingCreatedEvent(bookingDetails);
-            // log.info("Saved outbox event for booking: {}", bookingDetails.getId());
+            //disable TOP
+            //bookingRepository.save(booking); 
+            //kafkaTemplate.send(TOPIC, message);
 
             context.setBookingDetails(bookingDetails);
             return chain.doFilter(context);
